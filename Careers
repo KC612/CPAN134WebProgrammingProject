@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Seafood Restaurant Careers</title>
+            <link rel="stylesheet" href="styles.css">
+
+            <style>
+            body {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                margin: 0;
+                padding: 0; color:#631d1d;
+                background-color: #f3e2e2;
+              }
+              
+              header {
+                background-color: #631d1d;
+                color: #fff;
+                padding: 15px;
+              }
+              
+              
+              
+              section {
+                padding: 35px;
+              }
+              
+              
+              footer {
+                background-color: #631d1d;
+                color: #fff;
+                text-align: center;
+                padding: 10px;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+              }
+            </style>
+        </head>
+        <body>
+
+            <header>
+                <h1>Join Our Team!</h1>
+            </header>
+
+            <section id="open-positions">
+                <h2>Open Positions</h2>
+                <div class="position">
+                <h3>Line Cook</h3>
+                <p>We are looking for an experienced line cooks to join our kitchen team. </p>
+                </div>
+                <div class="position">
+                <h3>Server</h3>
+                <p>We are looking for a friendly serving staff. </p>
+                </div>
+                
+            </section>
+
+            <section id="apply">
+                <h2>Apply Now</h2>
+                <p>To apply for our positions, please fill out the form below:</p>
+                <form action="submit_application.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="text" id="Email" name="Email" required>
+            
+                <label for="position">Position:</label>
+                <input type="text" id="position" name="position" required>
+
+
+
+                <button type="submit">Submit Application</button>
+                </form>
+            </section>
+
+            <footer>
+                <p>&copy; 2024 Seafood Restaurant. All rights reserved.</p>
+            </footer>
+
+        </body>
+    </html>
