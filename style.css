@@ -1,0 +1,98 @@
+body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.div-header{
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: vh;
+    margin-bottom: 50px;
+    
+}
+
+.web-links{
+    
+    display: inline;
+    margin-top: 1050px;
+    margin-bottom: 10px;
+    color: aliceblue;
+
+}
+.web-link1{
+    margin-left: 200px;
+    margin-right: 200px;
+}
+.web-link2{
+    margin-right:200px;
+}
+.web-link3{
+    margin-right: 200px;
+}
+.web-link4{
+    margin-right:200px;
+}
+
+
+.header-vid{
+    position:absolute;
+    max-width: 100%;
+    z-index: -1;
+}
+
+.header-title{
+    max-width: 100%;
+    position: absolute;
+    font-size: 15em;
+    color: rgba(121, 218, 218, 0.554);
+}
+#opt-link1{
+    margin-top: 500px;
+    margin-bottom: 300px;
+    max-width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns:repeat(2, 1fr) ;
+    grid-template-rows:2, 1fr;
+    
+
+}
+
+#opt-dining{
+    max-width: 100%;
+    text-align: center;
+    color: aliceblue;
+    font-size: 11em;  
+}
+#menu-link-dining{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6em;
+    color: rgba(121, 218, 218, 0.588);
+}
+
+#opt-dining-img{
+    background-image: url(diningv1p1.jpeg);
+}
+#opt-events{
+    color: aliceblue;
+    font-size: 11em;
+}
+#opt-events-img{
+    max-width: 100%;
+    text-align: center;
+    background-image: url(projecteventsv1p1.jpg);
+    background-size: cover;
+}
+#events-link{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6em;
+    color: rgba(121, 218, 218, 0.588);
+}
