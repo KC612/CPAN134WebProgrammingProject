@@ -1,6 +1,6 @@
 body{
     max-width: 100%;
-    overflow-x: hidden;
+   
 }
 
 .div-header{
@@ -14,12 +14,11 @@ body{
 }
 
 .web-links{
-    
+    position: relative;    
     display: inline;
     margin-top: 1050px;
     margin-bottom: 10px;
     color: aliceblue;
-
 }
 .web-link1{
     margin-left: 200px;
