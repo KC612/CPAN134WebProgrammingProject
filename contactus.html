@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+/* Style the element with the id "myHeader" */
+#myHeader {
+  background-color: rgb(255, 255, 255);
+  color: navy;
+  padding: 40px;
+  text-align: center;
+  text-decoration: underline;
+  border-style: double;
+  border-color: red;
+  border-width: 5px;
+}
+
+/* Style all elements with the class name "funfact" */
+.funfact {
+  background-color:rgb(255, 255, 255);
+  color:navy;
+  padding: 10px;
+  text-align: center;
+  text-decoration: underline;
+  border-style: double;
+  border-color: red;
+  border-radius: 5px;
+ 
+
+} 
+body{background-color: darkblue;
+color: aliceblue;
+}
+
+cite { 
+  font-style: italic;
+}
+  address { 
+  display: block;
+  font-style: italic;
+}
+
+   * {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+#hp  {
+float: left;    
+ margin: 0 15px 0 0;
+}
+.faqs-container {
+    font-family: "Roboto", sans-serif;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.faqs-container .questions-container {
+  box-shadow: 0 4px 8px -3px rgba(0, 0, 0, 0.3);
+}
+
+.faqs-container h2 {
+  padding: 4px 32px;
+  font-size: 28px;
+}
+
+.faqs-container .faq-header {
+  display: flex;
+  background: rgb(181, 2, 2);
+  color: #f1faee;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.faqs-container .faq-header .open,
+.faqs-container .faq-header .close {
+  position: absolute;
+  right: 0;
+  padding: 0 32px;
+  font-size: 22px;
+  font-weight: bold;
+  transform: translateY(-8px);
+  opacity: 0;
+  transition: all 500ms;
+}
+
+.faqs-container .faq-header .open.active,
+.faqs-container .faq-header .close.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.faqs-container .faq-header h3 {
+  font-size: 20px;
+  padding: 0 32px;
+}
+
+.faqs-container .content {
+  padding: 0 32px;
+  background: #fdfffc;
+  line-height: 2;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 500ms;
+}
+
+.faqs-container .content.active {
+  max-height: 600px;
+}
+
+ /* Style for the button */
+ .gradient-button {
+              background-image: linear-gradient(to right, #ff0000, #08befb); /* Gradient colors */
+              border: none; /* No border */
+              color: white; /* Text color */
+              padding: 10px 20px; /* Padding */
+              font-size: 16px; /* Font size */
+              font-weight: bold;
+              cursor: pointer; /* Cursor style */
+              border-radius: 5px; /* Border radius */
+              transition: background-image 0.3s; /* Smooth transition for background change */
+            }
+            
+            /* Style for hover effect */
+            .gradient-button:hover {
+              background-image: linear-gradient(to right, #08befb, #ff0000); /* Gradient colors on hover */
+            }
+            .button-container{
+                display: flex; /* Use flexbox for layout */
+                margin-top: 20px; /* Add some top margin */
+            }
+            /* Style for spacing between buttons */
+        .gradient-button + .gradient-button {
+        margin-left: 10px; /* Small gap between buttons */
+            }
+            form, script, h1 {text-align: center;}
+        h1{color: #ff0000;}
+
+        body{color:darkblue; font-weight: bold;}
+    
+
+            /* Style for the form */
+        form {
+            border: 2px double red; /* Add a border to the form */
+            border-width: 5px;
+            padding: 20px; /* Add padding for spacing */
+            max-width: 400px; /* Limit the width of the form */
+            margin: 0 auto; /* Center the form horizontally */
+            background-color: aliceblue;
+            color: navy;
+            }
+
+        label {width:200px;
+            display:inline-block;
+            justify-content: left;
+            text-align: left;
+            margin: 4px;}
+
+            /* Style for required input fields */
+            input:required {
+            border-color: red; /* Highlight required input fields in red */
+            }
+            div{
+                justify-content: left;}
+    
+</style>
+</head>
+<body>
+
+<!-- An element with a unique id -->
+<div>
+<h1 id="myHeader">Contact Us</h1>
+<img src="transseafood.png" width="550" height="750" alt="image" style="float: left;margin-right: 5px; margin-bottom: 5px;">
+<span style="color: #f0f8ff;">We would love to hear from you! Whether you have a question, or feedback, or just want to say hello, don't hesitate to reach out. Our team at BigFin is here to ensure your dining experience is nothing short of exceptional. Fill out the form below, and we'll get back to you as soon as possible. Alternatively, you can also reach us directly via email, vist us in person, or check out our blog page for updates. We can't wait to connect with you and welcome you to our culinary haven!</span>
+<img src="Lobsterpic2.png" width="550" height="650" alt="image" style="float: right;margin-left: 5px; margin-bottom: 5px;">
+<br><br>
+
+<!-- Multiple elements with same class -->
+<form method="post">
+    <h1>Contact Form</h1>
+    <div>
+        <label for="Firstname">First Name</label>
+        <input class="red" type="text" name="Firstname" placeholder="Enter First Name" required><br><br>
+    </div>
+    <div>
+        <label for="Lastname">Last Name</label>
+        <input class="text" type="text" name="Lastname" placeholder="Enter Last Name" required ><br><br>
+        </div>
+    <div>
+    <label for ="gender">Gender</label><br>
+     <input type="radio" name="Gender" value="male">Male
+            <input type="radio" name="Gender" value="female">Female
+            <input type="radio" name="Gender" value="other">Other
+            <br><br>
+    </div>
+
+    <div>
+    <label for="dateofBirth">Date of Birth</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="Date" name="dateofBirth" placeholder="dd-mm-yyyy" required><br><br>
+    </div>
+
+    <div>
+    <label for="Email Address">Email Address</label>
+    <input class=red type="email" name="email" placeholder="Enter your email" required><br><br>
+    </div>
+    <div>
+    <label for="password">Password</label> 
+    <input type="text" name="Password" placeholder="Enter your password min 8 characters" required><br><br>
+    </div>
+    <div>
+    <label for="confirm">Confirm Password</label>
+    <input class=red type="text" name="ConfirmPassword" placeholder="Confirm password" required><br><br>
+    </div>
+
+    <div>
+   Phone Number &nbsp;&nbsp;&nbsp;&nbsp;<br>
+     <select name="PhoneNumber">
+        <optgroup lable="PhoneNumber">
+            <option value="1">+1</option>
+            <option value="2">+2</option>
+            <option value="3">+3</option>
+            <option value="4">+4</option>
+            <option value="5">+5</option>
+            <option value="6">+6</option>
+            <option value="7">+7</option>
+            <option value="8">+8</option>
+            <option value="9">+9</option>
+            <input type="text" name="Phone_Number" placeholder="Enter your phone number" required><br><br>
+        </div>
+
+</optgroup>
+    </select>
+    <label for="Address">Address</label>
+    <input type="text" name="Address" placeholder="Enter your address" required><br><br>
+        </select><br>
+    <div>
+    <label for="Pin">Message</label>
+    <input class=red type="text" name="message" placeholder ="Enter your message" required><br><br>
+    </div>
+
+    Subject: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="subject1" value="music">Question
+            <input type="checkbox" name="subject2" value="feedback">Feedback
+            <input type="checkbox" name="subject3" value="comment">Comment
+            <input type="checkbox" name="hobby4" value="other">Other<br><br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="vist">Rate Your Experience</label><br>
+    <input type="range" name="vist" id="vist" min="1" max="5" step="1"><br><br>
+
+    <div style="display: flex; justify-content: left;"></div>
+    <label for="" style="width: 0"></label>
+    <span style="color: black; font-weight: lighter;">Thank you for filling in our Contact form.</span><br><br>
+    <button class="gradient-button">Submit</button>
+    <p>𓇼 ⋆｡˚ 𓆝⋆｡˚ 𓇼</p>
+</form>
+
+<h2 class="funfact">Commonly Asked Questions</h2>
+<div class="faqs-container">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="questions-container">
+      <div class="content-container">
+        <div class="faq-header">
+          <h3>How do I purchase a membership?</h3>
+          <span class="open active">+</span>
+          <span class="close">-</span>
+        </div>
+
+        <div class="content">
+          <p>
+            Fill in our contact form, email us, or sign up in person!
+          </p>
+
+          <p>
+            We are always looking for more people to join our BinFin family.
+          </p>
+        </div>
+      </div>
+
+      <div class="content-container">
+        <div class="faq-header">
+          <h3>How do I cancel a membership?</h3>
+          <span class="open active">+</span>
+          <span class="close">-</span>
+        </div>
+
+        <div class="content">
+          <p>
+            Fill in our contact form or send us an email and we we do our best to give you a speedy responce. Alternatively you could vist us in person to cancel your membership immediately.
+          </p>
+        </div>
+      </div>
+
+      <div class="content-container">
+        <div class="faq-header">
+          <h3>Allergies / Dietary Restrictions</h3>
+          <span class="open active">+</span>
+          <span class="close">-</span>
+        </div>
+
+        <div class="content">
+          <p>
+            As BigFin specializes in surf and turf we can not absolutely guarantee that no cross contamination will occur. Please be aware of this when ordering.
+          </p>
+
+          <p>
+            Please be patient as we aim to make the resturant a welcoming space for everyone.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+
+<h2 class="funfact">Contact Information</h2>
+<address><span style="color: aliceblue;">
+    <br> 
+    Contact at:<br>
+    <a href="mailto:kcaceres0612@gmail.com">Email</a><br>
+    190 Boulevard Wilfrid-Hamel<br>
+    Toronto, Ontario<br>
+    </address>
+    <footer>BigFin &copy; </footer>
+    </span>
+    <img src="transcrawdad.png" width="200" height="200" alt="image" style="float: left;margin-right: 5px;">
+</body>
+</html>
