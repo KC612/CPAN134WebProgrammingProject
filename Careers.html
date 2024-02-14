@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Big Fin Careers</title>
+            <link rel="stylesheet" href="styles.css">
+
+            <style>
+            body {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                margin: 0;
+                padding: 0; color:#631d1d;
+                background-color: #f3e2e2;
+              }
+              
+              header {
+                background-color: #631d1d;
+                color: #fff;
+                padding: 15px;
+              }
+
+
+                 footer {
+              background-color: #631d1d;
+              color: #fff;
+              text-align: center;
+              padding: 20px 0;
+              }
+              
+              
+              
+              section {
+                padding: 35px;
+              }
+              
+              
+              .container {
+                max-width: 600px;
+                margin: 20px auto;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+              }
+
+              .job-listing {
+                background-color: #fff;
+                margin-bottom: 30px;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+              }
+
+              .job-title {
+                font-size: 24px;
+                color: #333;
+              }
+
+              .job-description {
+                margin-top: 10px;
+                color: #555;
+              }
+              h2 {
+                text-align: center;
+                color: #555;
+              }
+              .form-group {
+                margin-bottom: 30px
+                ; margin-right: 20px;
+              }
+              label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+                color:  #631d1d;
+              }
+              input[type="text"],
+              input[type="email"] {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+              }
+              input[type="file"] {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                ;
+              }
+              input[type="submit"] {
+                display: block;
+                width: 50%;
+                padding: 10px;
+                background: linear-gradient(to right, rgb(66, 52, 196), #960fcc);
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer; margin-left: 25%;
+              }
+              input[type="submit"]:hover {
+                background-color: #0056b3;
+              }
+            </style>
+        </head>
+        <body>
+
+            <header>
+                <h1>Join Our Team!</h1>
+            </header>
+
+            <section id="open-positions">
+                <h2 style="color: #333">Open Positions</h2>
+                <div class="position">
+                <h3 class="job-title">Line Cook</h3>
+                <p class="job-description">We are looking for an experienced line cook to join our kitchen team. </p>
+               
+                </div>
+                <div class="position">
+                  <h3 class="job-title">Head Chef</h3>
+                  <p class="job-description">We are looking for an experienced Head Chef to lead the kitchen team.</p>
+                  
+                </div>
+                
+                <div class="position">
+                  <h3 class="job-title">Sous Chef</h3>
+                  <p class="job-description">Join our team as a Sous Chef and assist our Head Chef in the preparation of delicious seafood dishes.</p>
+                  
+                </div>
+                <div class="position">
+                <h3 class="job-title">Server</h3>
+                <p class="job-description">We are looking for a friendly serving staff who is great at interacting with customers. </p>
+                
+                
+                </div>
+                
+            </section>
+
+            
+
+            <div class="container">
+              <h2 style="color: #631d1d""  >Submit Your Resume</h2>
+              <form action="submit_resume.php" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                  <label for="name">Full Name:</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address:</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                  <label for="role">Role Applying For:</label>
+                  <select id="role" name="role" required>
+                    <option value="">Select Role</option>
+                    <option value="Head Chef">Head Chef</option>
+                    <option value="Sous Chef">Sous Chef</option>
+                    <option value="Server">Server</option>
+                    <option value="Line Cook">Line Cook</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="resume">Upload Resume:</label>
+                  <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                </div>
+                <input type="submit" value="Submit Resume">
+              </form>
+            </div>
+
+            <footer>
+              
+               <p>&copy; 2024 Big Fin. All rights reserved.</p>
+             
+          </footer>
+
+           
+
+        </body>
+    </html>
