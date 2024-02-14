@@ -11,14 +11,15 @@
                 font-family: Georgia, 'Times New Roman', Times, serif;
                 margin: 0;
                 padding: 0; color:#631d1d;
-                background-color: #201e1e;
+                background-color: #272626;
               }
               
               header {
                 background-image: url(careers.jpg);
-                background-position:20%
+                background-position:bottom; background-size: 110%; 
                 ;color: #fff;
                 padding: 40px;
+              
               }
 
 
@@ -62,6 +63,7 @@
                 margin-top: 10px;
                 color: #555;
               }
+              h1{text-align: center;}
               h2 {
                 text-align: center;
                 color: #555;
@@ -115,7 +117,7 @@
         <body>
 
             <header>
-                <h1>Join Our Team!</h1>
+                <h1 style="color:#631d1d; margin-top: 20%;">Join Our Team!</h1>
             </header>
             
 
@@ -123,23 +125,23 @@
                 <h2 style="color: #fdfcfc">Open Positions</h2>
                 
                 <div class="container">
-                <h3 class="job-title">Line Cook</h3>
+                  <nav><a href="#submit_resume"><h3 class="job-title">Line Cook</h3></a></nav>
                 <p class="job-description">We are looking for an experienced line cook to join our kitchen team. </p>
                
                 </div>
                 <div class="container">
-                  <h3 class="job-title">Head Chef</h3>
+                  <nav><a href="#submit_resume"><h3 class="job-title">Head Chef</h3></a></nav>
                   <p class="job-description">We are looking for an experienced Head Chef to lead the kitchen team.</p>
                   
                 </div>
                 
                 <div class="container">
-                  <h3 class="job-title">Sous Chef</h3>
+                  <nav><a href="#submit_resume"><h3 class="job-title">Sous Chef</h3></a></nav>
                   <p class="job-description">Join our team as a Sous Chef and assist our Head Chef in the preparation of delicious seafood dishes.</p>
                   
                 </div>
                 <div class="container">
-                <h3 class="job-title">Server</h3>
+                  <nav><a href="#submit_resume"><h3 class="job-title">Server</h3></a></nav>
                 <p class="job-description">We are looking for a friendly serving staff who is great at interacting with customers. </p>
                 
                 
@@ -149,34 +151,36 @@
 
             
 
-            <div class="container">
-              <h2 style="color: #631d1d""  >Submit Your Resume</h2>
-              <form action="submit_resume.php" method="POST" enctype="multipart/form-data">
-                <div class="form-group">
-                  <label for="name">Full Name:</label>
-                  <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                  <label for="email">Email Address:</label>
-                  <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                  <label for="role">Role Applying For:</label>
-                  <select id="role" name="role" required>
-                    <option value="">Select Role</option>
-                    <option value="Head Chef">Head Chef</option>
-                    <option value="Sous Chef">Sous Chef</option>
-                    <option value="Server">Server</option>
-                    <option value="Line Cook">Line Cook</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="resume">Upload Resume:</label>
-                  <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
-                </div>
-                <input type="submit" value="Submit Resume">
-              </form>
-            </div>
+            <section id ="submit_resume">
+              <div class="container">
+                <h2 style="color: #631d1d""  >Submit Your Resume</h2>
+                <form action="submit_resume.php" method="POST" enctype="multipart/form-data">
+                  <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="role">Role Applying For:</label>
+                    <select id="role" name="role" required>
+                      <option value="">Select Role</option>
+                      <option value="Head Chef">Head Chef</option>
+                      <option value="Sous Chef">Sous Chef</option>
+                      <option value="Server">Server</option>
+                      <option value="Line Cook">Line Cook</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="resume">Upload Resume:</label>
+                    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                  </div>
+                  <input type="submit" value="Submit Resume">
+                </form>
+              </div>
+            </section>
 
             <footer>
               
