@@ -3,8 +3,82 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Menu</title>
-        <link rel="stylesheet" href="style.css">
+        <title>Big FIn Menus</title>
+    
+
+        <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3e2e2;
+            color: #631d1d;
+            background-image: url('menu background.jpg');
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat; 
+                    }
+        
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        
+        h2{ color: #f7f2f2;}
+        
+        
+        h1 {
+            font-size: 8rem;
+            margin: 0;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin-right: 40px;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        
+        .menu-section {
+            padding: 10px;
+        }
+        
+        .menu-item {
+            background-color: #f5efef;
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0px 2px 5px rgba(141, 73, 73, 0.1);
+            margin-bottom: 20px; font-size: small;
+        }
+        
+        .menu-item h3 {
+            margin-top: 0;
+        }
+        
+        .menu-item span {
+            display: block;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        footer {
+            background-color: #631d1d;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+        }
+        
+        </style>
     </head>
     <body>
         <div class="web-links">
@@ -16,12 +90,13 @@
     
             <header>
                 <div class="container">
-                <h1>Menu</h1>
+                <h1 style="color: white;">Menu</h1>
                 <nav>
                     <ul>
-                    <li><a href="#dinner-menu">Dinner</a></li>
                     <li><a href="#lunch-menu">Lunch</a></li>
+                    <li><a href="#dinner-menu">Dinner</a></li>
                     <li><a href="#drinks-menu">Drinks</a></li>
+                    <li><a href="#sides-menu">Sides</a></li>
                     </ul>
                 </nav>
                 </div>
@@ -42,11 +117,9 @@
                 </div>
                 
                 </div>
-            </section>
-    
             <section id="lunch-menu" class="menu-section">
-                <div class="container">
-                    <h2>Lunch Menu</h2>
+            <div class="container">
+                <h2 style="color: #631d1d;">Lunch</h2>
                 <div class="menu-item">
                     <h3>Fish Tacos</h3>
                     <p>Grilled fish tacos with avocado, coleslaw, and chipotle mayo.</p>
@@ -57,13 +130,64 @@
                     <p>Fried shrimp sandwich with lettuce, tomato, and remoulade sauce.</p>
                     <span>$14.99</span>
                 </div>
-              
+                <div class="menu-item">
+                    <h3>Chicken Caesar Salad</h3>
+                    <p>Romaine lettuce topped with grilled chicken, parmesan cheese, and Caesar dressing.</p>
+                    <span>$10.99</span>
                 </div>
-            </section>
-    
-            <section id="drinks-menu" class="menu-section">
-                <div class="container">
-                <h2>Drinks Menu</h2>
+                <div class="menu-item">
+                    <h3>Vegetarian Wrap</h3>
+                    <p>Grilled vegetables, hummus, and feta cheese wrapped in a tortilla.</p>
+                    <span>$11.99</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Grilled Chicken Sandwich</h3>
+                    <p>Grilled chicken breast served on a brioche bun with lettuce, tomato, and mayo.</p>
+                    <span>$13.99</span>
+                </div>
+          
+            </div>
+        </section>
+
+        <section id="dinner-menu" class="menu-section">
+            <div class="container">
+                <h2 style="color: #631d1d;">Dinner</h2>
+                <div class="menu-item">
+                    <h3>Grilled Salmon</h3>
+                    <p><sub>Grilled salmon served with roasted vegetables and lemon butter sauce.</sub></p>
+                    <span>$18.99</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Lobster Linguine</h3>
+                    <p>Linguine pasta with lobster meat, garlic, and white wine sauce.</p>
+                    <span>$24.99</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Seafood Paella</h3>
+                    <p>Traditional Spanish paella with shrimp, mussels, and chorizo.</p>
+                    <span>$28.99</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Cedar Plank Salmon</h3>
+                    <p>Salmon cooked on a cedar plank, served with wild rice pilaf.</p>
+                    <span>$22.99</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Crab Cakes</h3>
+                    <p>House-made crab cakes served with remoulade sauce.</p>
+                    <span>$22.99</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Crab Alfredo</h3>
+                    <p>Fettuccine pasta with crab meat and Alfredo sauce.</p>
+                    <span>$26.99</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="drinks-menu" class="menu-section">
+            <div class="container">
+                <h2>Drinks</h2>
                 <div class="menu-item">
                     <h3>Sea Breeze</h3>
                     <p>Vodka, cranberry juice, and grapefruit juice.</p>
@@ -74,14 +198,65 @@
                     <p>White rum, fresh mint, lime, sugar, and soda water.</p>
                     <span>$9.99</span>
                 </div>
+                <div class="menu-item">
+                    <h3>Old Fashioned</h3>
+                    <p>Bourbon, sugar, bitters, and an orange twist.</p>
+                    <span>$10.99</span>
                 </div>
-            </section>
-    
-            <footer>
-                <div class="container">
-                 <p>&copy; 2024 Seafood Restaurant. All rights reserved.</p>
+                <div class="menu-item">
+                    <h3>Pina Colada</h3>
+                    <p>Rum, coconut cream, pineapple juice, and crushed ice.</p>
+                    <span>$9.99</span>
                 </div>
-            </footer>
+                <div class="menu-item">
+                    <h3>Margarita</h3>
+                    <p>Tequila, lime juice, and triple sec, served with salt on the rim.</p>
+                    <span>$10.99</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Whiskey Sour</h3>
+                    <p>Bourbon, lemon juice, and simple syrup, garnished with a cherry and orange slice.</p>
+                    <span>$11.99</span>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="sides-menu" class="menu-section">
+            <div class="container">
+                <h2>Sides</h2>
+                <div class="menu-item">
+                    <h3>Garlic Parmesan Fries</h3>
+                    <p>French fries tossed in garlic butter and parmesan cheese.</p>
+                    <span>$6.99</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Truffle Mac and Cheese</h3>
+                    <p>Macaroni pasta in a creamy truffle-infused cheese sauce.</p>
+                    <span>$8.99</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Grilled Asparagus</h3>
+                    <p>Fresh asparagus spears grilled with olive oil and sea salt.</p>
+                    <span>$7.99</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Loaded Baked Potato</h3>
+                    <p>A baked potato topped with cheese, bacon, sour cream, and chives.</p>
+                    <span>$7.99</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Garlic Bread</h3>
+                    <p>Buttery garlic breadsticks served with marinara sauce.</p>
+                    <span>$5.99</span>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+             <p>&copy; 2024 Big Fin. All rights reserved.</p>
+            </div>
+        </footer>
     
         </body>
 </html>
