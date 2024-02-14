@@ -1,27 +1,41 @@
 body{
     max-width: 100%;
+    background-image: url(project1\ backgroundv1p1.png);
    
 }
 
 .div-header{
-    display: flex;
+    text-align: center;  
+    z-index: -1;  
     max-width: 100%;
-    justify-content: center;
-    align-items: center;
-    height: vh;
-    margin-bottom: 50px;
+    border: 2px solid black;
     
 }
 
-.web-links{
-    position: relative;    
-    display: inline;
-    margin-top: 1050px;
-    margin-bottom: 10px;
-    color: aliceblue;
+.header-vid{
+    overflow: hidden;
+    max-height: 70vh;
+    z-index: -1;
+    max-width: 100%;
 }
+.header-title{
+    text-align: center;
+    max-width: 100%;
+    font-size: 9em;
+    color: rgba(121, 218, 218, 0.694);
+}
+.web-links{
+    border: 2px solid black;
+    text-align: center;
+    display: flex;    
+    text-align: center;
+    margin-bottom: 10px;
+    color: rgb(0, 0, 0);
+}
+
+
 .web-link1{
-    margin-left: 200px;
+    margin-left:28%;
     margin-right: 200px;
 }
 .web-link2{
@@ -35,20 +49,11 @@ body{
 }
 
 
-.header-vid{
-    position:absolute;
-    max-width: 100%;
-    z-index: -1;
-}
 
-.header-title{
-    max-width: 100%;
-    position: absolute;
-    font-size: 15em;
-    color: rgba(121, 218, 218, 0.554);
-}
+
+
 #opt-link1{
-    margin-top: 500px;
+    margin-top: 100px;
     margin-bottom: 300px;
     max-width: 100%;
     position: relative;
