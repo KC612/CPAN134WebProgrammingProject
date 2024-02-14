@@ -1,6 +1,7 @@
 body{
     margin: 15px;
     max-width: 100%;
+    overflow-x:hidden;
     background-image: url(project1\ backgroundv1p1.png);
    
 }
@@ -9,7 +10,7 @@ body{
     text-align: center;  
     z-index: -1;  
     max-width: 100%;
-    border: 2px solid black;
+    
     
 }
 
@@ -26,7 +27,6 @@ body{
     color: rgba(121, 218, 218, 0.694);
 }
 .web-links{
-    border: 2px solid black;
     text-align: center;
     display: flex;    
     text-align: center;
@@ -100,4 +100,23 @@ body{
     align-items: center;
     font-size: 6em;
     color: rgba(121, 218, 218, 0.588);
+}
+.footer{
+    padding: 100px;
+}
+.footer-link{
+    margin-bottom: 10%;
+}
+.main-div{
+    margin-left: 30%;
+    margin-right: 30%;
+    display: grid;
+    gap: 1.5rem;
+}
+#main-header-blog{
+    margin-top: 20%;
+    margin-bottom: 10%;
+}
+.event-border-hover{
+    border: 5px solid black;
 }
