@@ -192,6 +192,24 @@ a:hover, a:focus {color:red;}
     font-weight: bold;
     text-align: center;
 }
+main p:first-child::first-letter {font-size: 25px;}
+p {font-size: 20px;}
+/* For desktop: FILL IN/fix KATE*/
+  /* For mobile phones: */
+  /* Media query for smaller devices */
+  @media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+  .web-links-one {
+    display: flex;
+    justify-content: center; /* Align items horizontally in the center */
+    align-items: center; /* Align items vertically in the center */
+    flex-wrap: wrap; /* Allow wrapping if content exceeds the width */
+    width: 100%;
+}
+  }
 </style>
 </head>
 <body>
@@ -207,13 +225,15 @@ a:hover, a:focus {color:red;}
 <div>
 <h1 id="myHeader">About Us</h1>
 <img src="/resources/movingclaw.gif" width="100" height="100" alt="image" style="float: right;margin-left: 5px;">
-<div id ="div2"><p><b>Welcome to BigFin, Toronto's newest surf and turf sensation! Nestled in the heart of the city, our restaurant offers a delightful blend of aquatic delights and savory land-based dishes that are sure to make waves in your taste buds. Dive into our ocean-inspired menu featuring an array of fin-tastic seafood options, from succulent shrimp skewers to mouthwatering lobster tails. Our turf selection boasts premium cuts of meat cooked to perfection, ensuring every bite is a reel treat. Whether you're a seafood aficionado or a land lover, there's something for every palate to savor at BinFin. So come on in and let us sea you soon!
+<div id ="div2"><main><p><b>Welcome to BigFin, Toronto's newest surf and turf sensation!<br>
+  Nestled in the heart of the city, our restaurant offers a delightful blend of aquatic delights and savory land-based dishes that are sure to make waves in your taste buds. Whether you're a seafood aficionado or a land lover, there's something for every palate to savor at BinFin. So come on in and let us <strong>sea you soon!</strong>
+  </b></p></main>
 </div>
 
 </p>
 <!-- Multiple elements with same class -->
 <h2 class="funfact">Our Mission</h2>
-<div id= "div2"><p><b>Fostering a vibrant community at BigFin is at the heart of everything we do. Our goal is to create a welcoming space where people of all ages can come together to savor delicious food, share memorable experiences, and build lasting connections. While our restaurant operates as an all-ages venue for the most part, we also offer exclusive member events and bookings for those aged 19 and above, in line with legal drinking regulations. However, we haven't forgotten about our younger guests – family-friendly bookings, such as kids' birthday events, are also available, ensuring that everyone feels included in our community. With special deals on bookings and access to exclusive events, our memberships are designed to foster a sense of belonging and brand loyalty among our patrons. We believe that by nurturing a strong community, we can create a space where friendships flourish, memories are made, and every visit feels like coming home.</b></p></div>
+<div id= "div2"><main><p><b>Our goal is to create a welcoming space where people of all ages can come together to savor delicious food. While our restaurant operates as an all-ages venue for the most part, we also offer exclusive member events and bookings for those aged 19 and above, in line with legal drinking regulations. However, we haven't forgotten about our younger guests – family-friendly bookings, such as kids' birthday events, are also available, ensuring that everyone feels included in our community. By nurturing a strong community, we can create a space where friendships flourish, memories are made, and every visit feels like coming home.</main></b></p></div>
 <div class="row">
     <div class="column">
         <img src="/resources/redlobsterpic" alt="redlobsterpic" style="width:100%">
@@ -228,14 +248,14 @@ a:hover, a:focus {color:red;}
 
 <h2 class="funfact">Our Story</h2>
 <img src="/resources/transpinklobster.png" width="400" height="200" alt="transpinklobster" style="float: right;margin-left: 5px;">
-<div id= "div2"><p><b>After graduating from Humber College, Osasere Obazogbon, Katelynn Caceres, and Joseph Waldron, three passionate computer programming students, embarked on a delicious journey together. Fueled by their shared love for food and a desire to make a positive impact, they founded BigFin with a vision to create a fun and vibrant environment while serving ethically sourced cuisine. Harnessing their technical skills, they even designed and developed the website for the restaurant, showcasing their dedication to every aspect of the venture. Their combined expertise in both technology and culinary arts has allowed them to craft a dining experience that not only delights the taste buds but also upholds values of sustainability and ethical sourcing. With their innovative spirit and commitment to excellence, they've transformed their dream into a reality, inviting guests to indulge in flavorful dishes while supporting a cause they believe in.</b></p>
+<div id= "div2"><main><p><b>After graduating from Humber College, Osasere Obazogbon, Katelynn Caceres, and Joseph Waldron, three passionate computer programming students, embarked on this culinary journey together. With their innovative spirit and commitment to excellence, they've transformed their dream into a reality, inviting guests to indulge in flavorful dishes while supporting an enviornmental cause they believe in.</b></p></main><br>
 <blockquote cite="https://chavezfoundation.org/about-cesar-chavez/"><i>
     "If you really want to make a friend, go to someone’s house and eat with him… The people who give you their food give you their heart."</i>
 <footer>- Cesar Chavez</footer>
     </blockquote>
 <br><br></div>
 <h2 class="funfact">Our Food</h2>
-<div id= "div2"><p><b>At BinFin, we're not just about tantalizing taste buds – we're committed to making a splash with sustainability. Our mission is to ensure that every dish we serve not only delights our customers but also respects the delicate balance of our oceans and ecosystems. That's why we're dedicated to sourcing our seafood and turf ingredients from sustainable sources, working closely with local fishermen and farmers who share our values. From line-caught fish to grass-fed beef, we strive to minimize our environmental footprint while maximizing flavor. By choosing BigFin, you're not only indulging in delicious cuisine but also joining us in our quest to protect the planet, one delectable dish at a time.</b></p></div>
+<div id= "div2"><main><p><b>At BinFin, we're not just about tantalizing taste buds – we're committed to making a splash with sustainability.</b></p></main></div>
 <div>
 <center>
 <a href="https://www.youtube.com/watch?v=6ps0truARKs&t=3s" target="_blank">This Is A Sustainable Fish</a><br>
@@ -246,7 +266,7 @@ a:hover, a:focus {color:red;}
 </div>
 
 <h2 class="funfact">Our Future</h2>
-<div id= "div2"><p><b><span class="center">As BinFin sets sail into the future, our vision is as vast as the ocean itself. We aspire to expand our footprint across Ontario, bringing our unique blend of delectable surf and turf cuisine to new communities far and wide. But our ambitions extend beyond mere growth – sustainability remains firmly anchored at the core of our mission. We're committed to continuing our journey towards becoming a model of environmental stewardship, sourcing ingredients responsibly, and minimizing our ecological impact every step of the way. As we expand, we're determined to not only serve delicious food but also to cultivate a strong presence wherever we go. By fostering meaningful connections and nurturing a sense of belonging, we aim to create more than just a restaurant – we strive to build a home away from home for all who walk through our doors. With every dish we serve and every hand we shake, we're dedicated to shaping a future where sustainability, community, and culinary excellence go hand in hand.</b></p></span></div>
+<div id= "div2"><main><p><span class = "center">As BinFin sets sail into the future, our vision is as vast as the ocean itself. We aspire to expand our footprint across Ontario, bringing our unique blend of delectable surf and turf cuisine to new communities far and wide. With every dish we serve and every hand we shake, we're dedicated to shaping a future where sustainability, community, and culinary excellence go hand in hand.<b><span class="center">As BinFin sets sail into the future, our vision is as vast as the ocean itself. We aspire to expand our footprint across Ontario, bringing our unique blend of delectable surf and turf cuisine to new communities far and wide. With every dish we serve and every hand we shake, we're dedicated to shaping a future where sustainability, community, and culinary excellence go hand in hand.</b></p></span></main></div>
 <div class="row">
     <div class="column">
         <img src="/resources/fisheggs.gif" alt="fisheggs" style="width:100%">
@@ -317,8 +337,9 @@ a:hover, a:focus {color:red;}
 
 <script src="/javascript/main.js"></script>
 <br>
+
 <h2 class="funfact">Contact Us</h2>
-<div id= "div2"><p>We would love to hear from you! Whether you have a question, or feedback, or just want to say hello, don't hesitate to reach out. Our team at BigFin is here to ensure your dining experience is nothing short of exceptional. Fill out the form below, and we'll get back to you as soon as possible. Alternatively, you can also reach us directly via email, vist us in person, or check out our blog page for updates. We can't wait to connect with you and welcome you to our culinary haven!</p></div><br>
+<div id= "div2"><main><p>We would love to hear from you! Fill out the form below, email us, visit us in person, & check out our blog page for updates. We can't wait to connect with you and welcome you to our culinary haven!</p></div></main><br>
 <form method="post">
   <h1>Contact Form</h1>
   <div>
