@@ -15,6 +15,7 @@
   border-style: double;
   border-color: red;
   border-width: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 /* Style all elements with the class name "funfact" */
@@ -26,6 +27,7 @@
   border-style: double;
   border-color: red;
   border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 } 
 .funfact:hover {
   background-color: lightskyblue;
@@ -194,21 +196,28 @@ a:hover, a:focus {color:red;}
 }
 main p:first-child::first-letter {font-size: 25px;}
 p {font-size: 20px;}
-/* For desktop: FILL IN/fix KATE*/
-  /* For mobile phones: */
-  /* Media query for smaller devices */
-  @media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  [class*="col-"] {
-    width: 100%;
-  }
-  .web-links-one {
+
+.web-links-one {
     display: flex;
     justify-content: center; /* Align items horizontally in the center */
     align-items: center; /* Align items vertically in the center */
     flex-wrap: wrap; /* Allow wrapping if content exceeds the width */
     width: 100%;
 }
+  /* Media query for smaller devices */
+  @media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+  [class*="web-links-one"] {
+    width: 100%;
+  }
+
+  [class*="funfact"] {
+    width: 100%;
+  }
+
   }
 </style>
 </head>
@@ -220,18 +229,19 @@ p {font-size: 20px;}
     <a class="web-links web-link3" href="contactus.html">CONTACT US</a>
     <a class="web-links web-link4" href="Blog.html">BLOG</a>
     <a class="web-links web-link5" href="Careers.html">CAREERS</a>
-  </div><br>
+  </div>
 <!-- An element with a unique id -->
-<div>
+<div class="col-1">
 <h1 id="myHeader">About Us</h1>
-<img src="/resources/movingclaw.gif" width="100" height="100" alt="image" style="float: right;margin-left: 5px;">
-<div id ="div2"><main><p><b>Welcome to BigFin, Toronto's newest surf and turf sensation!<br>
+<div id="div2"><main><p><b>Welcome to BigFin, Toronto's newest surf and turf sensation!<br>
   Nestled in the heart of the city, our restaurant offers a delightful blend of aquatic delights and savory land-based dishes that are sure to make waves in your taste buds. Whether you're a seafood aficionado or a land lover, there's something for every palate to savor at BinFin. So come on in and let us <strong>sea you soon!</strong>
-  </b></p></main>
+  </b></p></main><br>
+</div>
 </div>
 
 </p>
 <!-- Multiple elements with same class -->
+<div class="col-1">
 <h2 class="funfact">Our Mission</h2>
 <div id= "div2"><main><p><b>Our goal is to create a welcoming space where people of all ages can come together to savor delicious food. While our restaurant operates as an all-ages venue for the most part, we also offer exclusive member events and bookings for those aged 19 and above, in line with legal drinking regulations. However, we haven't forgotten about our younger guests – family-friendly bookings, such as kids' birthday events, are also available, ensuring that everyone feels included in our community. By nurturing a strong community, we can create a space where friendships flourish, memories are made, and every visit feels like coming home.</main></b></p></div>
 <div class="row">
@@ -245,28 +255,35 @@ p {font-size: 20px;}
       <img src="/resources/redlobsterpic4" alt="redlobsterpic4" style="width:100%">
     </div>
     </div>
+  </div>
 
+<div class="col-2">
 <h2 class="funfact">Our Story</h2>
-<img src="/resources/transpinklobster.png" width="400" height="200" alt="transpinklobster" style="float: right;margin-left: 5px;">
+<div><img src="/resources/transpinklobster.png" width="20%" height="20%" alt="transpinklobster" style="float: right; margin-left: 5px; padding-top: 5px;"></div>
 <div id= "div2"><main><p><b>After graduating from Humber College, Osasere Obazogbon, Katelynn Caceres, and Joseph Waldron, three passionate computer programming students, embarked on this culinary journey together. With their innovative spirit and commitment to excellence, they've transformed their dream into a reality, inviting guests to indulge in flavorful dishes while supporting an enviornmental cause they believe in.</b></p></main><br>
 <blockquote cite="https://chavezfoundation.org/about-cesar-chavez/"><i>
     "If you really want to make a friend, go to someone’s house and eat with him… The people who give you their food give you their heart."</i>
 <footer>- Cesar Chavez</footer>
     </blockquote>
 <br><br></div>
+</div>
+
+<div class="col-3">
 <h2 class="funfact">Our Food</h2>
 <div id= "div2"><main><p><b>At BinFin, we're not just about tantalizing taste buds – we're committed to making a splash with sustainability.</b></p></main></div>
 <div>
 <center>
 <a href="https://www.youtube.com/watch?v=6ps0truARKs&t=3s" target="_blank">This Is A Sustainable Fish</a><br>
-<video width="1000" controls>
-    <source src="/resources/ Is A Sustainable Fish.mp4"video/mp4"
+<video width="100%" controls>
+    <source src="/resources/This Is A Sustainable Fish.mp4" type="video/mp4">
 </video>
 </center>
 </div>
+</div>
 
+<div class="col-4">
 <h2 class="funfact">Our Future</h2>
-<div id= "div2"><main><p><span class = "center">As BinFin sets sail into the future, our vision is as vast as the ocean itself. We aspire to expand our footprint across Ontario, bringing our unique blend of delectable surf and turf cuisine to new communities far and wide. With every dish we serve and every hand we shake, we're dedicated to shaping a future where sustainability, community, and culinary excellence go hand in hand.<b><span class="center">As BinFin sets sail into the future, our vision is as vast as the ocean itself. We aspire to expand our footprint across Ontario, bringing our unique blend of delectable surf and turf cuisine to new communities far and wide. With every dish we serve and every hand we shake, we're dedicated to shaping a future where sustainability, community, and culinary excellence go hand in hand.</b></p></span></main></div>
+<div id= "div2"><main><p><span class = "center">As BinFin sets sail into the future, our vision is as vast as the ocean itself. With every dish we serve and every hand we shake, we're dedicated to shaping a future where sustainability, community, and culinary excellence go hand in hand.</b></p></span></main></div>
 <div class="row">
     <div class="column">
         <img src="/resources/fisheggs.gif" alt="fisheggs" style="width:100%">
@@ -278,7 +295,9 @@ p {font-size: 20px;}
       <img src="/resources/ethicaltransfishplate.gif" alt="ethicaltransfishplate" style="width:100%">
     </div>
     </div>
+    </div>
 
+<div class="col-5">
 <h2 class="funfact">Q&A</h2><br>
 <div class="faqs-container">
 
@@ -336,8 +355,10 @@ p {font-size: 20px;}
 </div>
 
 <script src="/javascript/main.js"></script>
+</div>
 <br>
 
+<div class="col-6">
 <h2 class="funfact">Contact Us</h2>
 <div id= "div2"><main><p>We would love to hear from you! Fill out the form below, email us, visit us in person, & check out our blog page for updates. We can't wait to connect with you and welcome you to our culinary haven!</p></div></main><br>
 <form method="post">
@@ -381,5 +402,6 @@ p {font-size: 20px;}
     </address>
     <footer>BigFin &copy; </footer>
     <img src="/resources/transcrawdad.png" width="200" height="200" alt="image" style="float: left;margin-right: 5px;">
+</div>
 </body>
 </html>
