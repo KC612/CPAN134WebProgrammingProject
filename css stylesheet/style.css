@@ -1,40 +1,130 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
 body{
-    margin: 15px;
+    margin: 1em;
     max-width: 100%;
-    overflow-x:hidden;
-    background-image: url(project1\ backgroundv1p1.png);
+    background-image: url(/resources/project1\ backgroundv1p1.png);
    
 }
 
 .div-header{
-    text-align: center;  
-    z-index: -1;  
-    max-width: 100%;
+    width: auto;
+    text-align: center;    
+    max-width: auto;
     
     
 }
 
 .header-vid{
-    overflow: hidden;
+    position: absolute;
+    overflow-y: hidden;
     max-height: 70vh;
-    z-index: -1;
-    max-width: 100%;
+    max-width: auto;
 }
+@media (min-width:768px ) {
+    .div-header{
+       width: auto;
+       height: auto;
+    }
+    
+}
+
+
 .header-title{
+    position: relative;
+    padding-bottom: 2.3em;
     text-align: center;
-    max-width: 100%;
+    max-width: auto;
     font-size: 9em;
     color: rgba(121, 218, 218, 0.694);
 }
+@media (max-width:938px){
+    .header-title{
+        font-size: 8em;
+        padding-bottom: 3em;
+    }
+}
 .web-links{
+    position: relative;
+    padding-bottom: 5em;
     display: flex;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 10em;
     margin-bottom: 10px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+@media(max-width:938px){
+    .web-links{
+        display: none;
+    }
+}
+
+.nav-bar{
+    position: absolute;
+    z-index: 2;
+    right: 10%;
+    top: 80%;
+    margin-right: 1em;
+    font-size: 3em;
+    list-style: none;
+    display: none;
+}
+@media(min-width:938px){
+    .nav-bar{
+        display: contents;
+    }
+}
+
+.nav-toggle:checked ~ .nav-bar{
+    display: block;
 }
 
 
-.web-link1{
+.nav-toggle-label{
+    position: absolute;
+    bottom: 12%;
+    right: 0%;
+    font-size: 4em;
+    margin-right:3em;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    width: auto;
+    z-index: 2;
+    display: none;
+}
+@media (min-width:938px){
+    .nav-toggle-label{
+       display: contents;
+       position: absolute;
+       font-size: 5em;
+    }
+}
+.nav-toggle{
+    display: none;
+}
+
+
+span{
+    color: rgb(76, 115, 150);
+}
+@media (max-width:938px){
+    span{
+       display: contents;
+       position: absolute;
+       font-size: 3em;
+       
+    
+       
+    }
+}
+
+/**.web-link1{
     margin-right: 175px;
 }
 .web-link2{
@@ -49,26 +139,35 @@ body{
 .web-links{
     margin-left: 5%;
     margin-right:175px ;
-}
+}**/
 
 
 
 
 
 #opt-link1{
-    margin-top: 100px;
-    margin-bottom: 300px;
-    max-width: 100%;
+    margin-top: 1em;
+    padding-top: 5em;
+    margin-bottom: 100px;
+    max-width: auto;
     position: relative;
     display: grid;
+    gap: 3em;
     grid-template-columns:repeat(2, 1fr) ;
     grid-template-rows:2, 1fr;
-    
+}
+@media(max-width:938px){
+    #opt-link1{
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
 
+    }
 }
 
+
 #opt-dining{
-    max-width: 100%;
+    max-width: auto;
     text-align: center;
     color: aliceblue;
     font-size: 11em;  
@@ -83,16 +182,17 @@ body{
 }
 
 #opt-dining-img{
-    background-image: url(diningv1p1.jpeg);
+    background-image: url(/resources/diningv1p1.jpeg);
 }
 #opt-events{
+    max-width: auto;
     color: aliceblue;
     font-size: 11em;
 }
 #opt-events-img{
-    max-width: 100%;
+    max-width: auto;
     text-align: center;
-    background-image: url(projecteventsv1p1.jpg);
+    background-image: url(/resources/projecteventsv1p1.jpg);
     background-size: cover;
 }
 #events-link{
@@ -104,10 +204,25 @@ body{
     color: rgba(121, 218, 218, 0.588);
 }
 .footer{
-    padding: 100px;
+    width: 75%;
+    
 }
 .footer-link{
-    margin-bottom: 10%;
+    display: inline-block;
+    align-items: center;
+    padding: 5px;
+    margin-right: 5px;
+    padding: 10px;
+}
+@media(max-width:938px){
+    .footer-link{
+        display: inline-block;
+        padding: 0%;
+        font-size: 3em;
+    }
+}
+#footer_div{
+    border-bottom: 3px solid black;
 }
 .main-div{
     margin-left: 30%;
