@@ -198,12 +198,26 @@ main p:first-child::first-letter {font-size: 25px;}
 p {font-size: 20px;}
 
 .web-links-one {
-    display: flex;
+  display:flex;
+  flex-wrap: wrap;
     justify-content: center; /* Align items horizontally in the center */
     align-items: center; /* Align items vertically in the center */
-    flex-wrap: wrap; /* Allow wrapping if content exceeds the width */
     width: 100%;
+    padding: 0;
 }
+.web-links-one a {
+            text-decoration: none;
+            color: navy;
+            padding: 10px;
+            margin: 5px;
+            border: 2px solid navy;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .web-links-one a:hover {
+            background-color: navy;
+            color: white;
+        }
   /* Media query for smaller devices */
   @media only screen and (max-width: 768px) {
   /* For mobile phones: */
@@ -217,14 +231,16 @@ p {font-size: 20px;}
   [class*="funfact"] {
     width: 100%;
   }
-
+  .myHeader {
+    width: 100%;
+  }
   }
 </style>
 </head>
 <body>
   <div class="web-links-one">
     <a class="web-links web-link0" href="Homepage.html"> HOME</a>
-    <a class="web-links web-link1" href="menu.html"> DINING </a>
+    <a class="web-links web-link1" href="menu.html"> DINING</a>
     <a class="web-links web-link2" href="Aboutus.html">ABOUT US</a>
     <a class="web-links web-link3" href="contactus.html">CONTACT US</a>
     <a class="web-links web-link4" href="Blog.html">BLOG</a>
