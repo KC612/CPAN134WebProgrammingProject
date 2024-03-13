@@ -7,6 +7,7 @@
 body{
     margin: 1em;
     max-width: 100%;
+    overflow-x:hidden;
     background-image: url(/resources/project1\ backgroundv1p1.png);
    
 }
@@ -22,6 +23,7 @@ body{
 .header-vid{
     position: absolute;
     overflow-y: hidden;
+    overflow: hidden;
     max-height: 70vh;
     max-width: auto;
 }
@@ -55,6 +57,7 @@ body{
     align-items: center;
     justify-content: center;
     gap: 10em;
+    text-align: center;
     margin-bottom: 10px;
     color: rgb(255, 255, 255);
 }
@@ -126,20 +129,28 @@ span{
 
 /**.web-link1{
     margin-right: 175px;
+/**.web-link1{
+    margin-right: 160px;
 }
 .web-link2{
-    margin-right:175px;
+    margin-right:160px;
 }
 .web-link3{
-    margin-right: 175px;
+    margin-right: 160px;
 }
 .web-link4{
-    margin-right:175px;
-}
+    margin-right:160px;
+}**/
 .web-links{
     margin-left: 5%;
     margin-right:175px ;
 }**/
+    margin: 50px;
+    padding-top: 8em;
+    position: relative;
+    color: aliceblue;
+    align-items: center;
+}
 
 
 
@@ -165,6 +176,10 @@ span{
     }
 }
 
+}
+
+/** grid-template-columns:repeat(2, 1fr) ;
+    grid-template-rows:2, 1fr;**/
 
 #opt-dining{
     max-width: auto;
@@ -182,6 +197,7 @@ span{
 }
 
 #opt-dining-img{
+    width: 100%;
     background-image: url(/resources/diningv1p1.jpeg);
 }
 #opt-events{
@@ -241,3 +257,6 @@ span{
 
    
 }
+.web-links-one{
+     padding: auto;
+    text-align: center;}

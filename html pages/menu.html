@@ -82,6 +82,30 @@
             text-align: center;
             padding: 15px 0;
         }
+        .rating input {
+            display: none;
+        }
+
+        .rating {
+            display: inline-block;
+            direction: rtl;
+        }
+
+      
+        .rating label {
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            background-image: url('empty star.jpg'); 
+            background-size: cover;
+            display: inline-block;
+        }
+
+        
+        .rating input:checked ~ label {
+            background-image: url('filled star.png');
+        }
+        
         
         </style>
     </head>
@@ -101,48 +125,96 @@
                 </div>
             </header>
     
-            <section id="dinner-menu" class="menu-section">
-                <div class="container">
-                <h2>Dinner Menu</h2>
-                <div class="menu-item">
-                    <h3>Grilled Salmon</h3>
-                    <p>Grilled salmon served with roasted vegetables and lemon butter sauce.</p>
-                    <span>$18.99</span>
-                </div>
-                <div class="menu-item">
-                    <h3>Lobster Linguine</h3>
-                    <p>Linguine pasta with lobster meat, garlic, and white wine sauce.</p>
-                    <span>$24.99</span>
-                </div>
+         
                 
                 </div>
             <section id="lunch-menu" class="menu-section">
             <div class="container">
-                <h2 style="color: #631d1d;">Lunch</h2>
+                <h2 style="color:white;">Lunch</h2>
                 <div class="menu-item">
                     <h3>Fish Tacos</h3>
                     <p>Grilled fish tacos with avocado, coleslaw, and chipotle mayo.</p>
                     <span>$12.99</span>
+                    <div class="rating">
+                        <input type="radio" id="star1" name="rating" value="1" />
+                        <label for="star1" title="1 stars"></label>
+                        <input type="radio" id="star2" name="rating" value="2" />
+                        <label for="star2" title="2 stars"></label>
+                        <input type="radio" id="star3" name="rating" value="3" />
+                        <label for="star3" title="3 stars"></label>
+                        <input type="radio" id="star4" name="rating" value="4" />
+                        <label for="star4" title="4 stars"></label>
+                        <input type="radio" id="star5" name="rating" value="4" />
+                        <label for="star5" title="5 star"></label>
+                    </div>
                 </div>
                 <div class="menu-item">
                     <h3>Shrimp Po' Boy</h3>
                     <p>Fried shrimp sandwich with lettuce, tomato, and remoulade sauce.</p>
                     <span>$14.99</span>
+                    <div class="rating">
+                        <input type="radio" id="star1" name="rating" value="1" />
+                        <label for="star1" title="1 stars"></label>
+                        <input type="radio" id="star2" name="rating" value="2" />
+                        <label for="star2" title="2 stars"></label>
+                        <input type="radio" id="star3" name="rating" value="3" />
+                        <label for="star3" title="3 stars"></label>
+                        <input type="radio" id="star4" name="rating" value="4" />
+                        <label for="star4" title="4 stars"></label>
+                        <input type="radio" id="star5" name="rating" value="4" />
+                        <label for="star5" title="5 star"></label>
+                    </div>
                 </div>
                 <div class="menu-item">
                     <h3>Chicken Caesar Salad</h3>
                     <p>Romaine lettuce topped with grilled chicken, parmesan cheese, and Caesar dressing.</p>
                     <span>$10.99</span>
+                    <div class="rating">
+                        <input type="radio" id="star1" name="rating" value="1" />
+                        <label for="star1" title="1 stars"></label>
+                        <input type="radio" id="star2" name="rating" value="2" />
+                        <label for="star2" title="2 stars"></label>
+                        <input type="radio" id="star3" name="rating" value="3" />
+                        <label for="star3" title="3 stars"></label>
+                        <input type="radio" id="star4" name="rating" value="4" />
+                        <label for="star4" title="4 stars"></label>
+                        <input type="radio" id="star5" name="rating" value="4" />
+                        <label for="star5" title="5 star"></label>
+                    </div>
                 </div>
                 <div class="menu-item">
                     <h3>Vegetarian Wrap</h3>
                     <p>Grilled vegetables, hummus, and feta cheese wrapped in a tortilla.</p>
                     <span>$11.99</span>
+                    <div class="rating">
+                        <input type="radio" id="star1" name="rating" value="1" />
+                        <label for="star1" title="1 stars"></label>
+                        <input type="radio" id="star2" name="rating" value="2" />
+                        <label for="star2" title="2 stars"></label>
+                        <input type="radio" id="star3" name="rating" value="3" />
+                        <label for="star3" title="3 stars"></label>
+                        <input type="radio" id="star4" name="rating" value="4" />
+                        <label for="star4" title="4 stars"></label>
+                        <input type="radio" id="star5" name="rating" value="4" />
+                        <label for="star5" title="5 star"></label>
+                    </div>
                 </div>
                 <div class="menu-item">
                     <h3>Grilled Chicken Sandwich</h3>
                     <p>Grilled chicken breast served on a brioche bun with lettuce, tomato, and mayo.</p>
                     <span>$13.99</span>
+                    <div class="rating">
+                        <input type="radio" id="star1" name="rating" value="1" />
+                        <label for="star1" title="1 stars"></label>
+                        <input type="radio" id="star2" name="rating" value="2" />
+                        <label for="star2" title="2 stars"></label>
+                        <input type="radio" id="star3" name="rating" value="3" />
+                        <label for="star3" title="3 stars"></label>
+                        <input type="radio" id="star4" name="rating" value="4" />
+                        <label for="star4" title="4 stars"></label>
+                        <input type="radio" id="star5" name="rating" value="4" />
+                        <label for="star5" title="5 star"></label>
+                    </div>
                 </div>
           
             </div>
@@ -155,31 +227,103 @@
                     <h3>Grilled Salmon</h3>
                     <p><sub>Grilled salmon served with roasted vegetables and lemon butter sauce.</sub></p>
                     <span>$18.99</span>
+                    <div class="rating">
+                        <input type="radio" id="star1" name="rating" value="1" />
+                        <label for="star1" title="1 stars"></label>
+                        <input type="radio" id="star2" name="rating" value="2" />
+                        <label for="star2" title="2 stars"></label>
+                        <input type="radio" id="star3" name="rating" value="3" />
+                        <label for="star3" title="3 stars"></label>
+                        <input type="radio" id="star4" name="rating" value="4" />
+                        <label for="star4" title="4 stars"></label>
+                        <input type="radio" id="star5" name="rating" value="4" />
+                        <label for="star5" title="5 star"></label>
+                    </div>
                 </div>
                 <div class="menu-item">
                     <h3>Lobster Linguine</h3>
                     <p>Linguine pasta with lobster meat, garlic, and white wine sauce.</p>
                     <span>$24.99</span>
+                    <div class="rating">
+                        <input type="radio" id="star1" name="rating" value="1" />
+                        <label for="star1" title="1 stars"></label>
+                        <input type="radio" id="star2" name="rating" value="2" />
+                        <label for="star2" title="2 stars"></label>
+                        <input type="radio" id="star3" name="rating" value="3" />
+                        <label for="star3" title="3 stars"></label>
+                        <input type="radio" id="star4" name="rating" value="4" />
+                        <label for="star4" title="4 stars"></label>
+                        <input type="radio" id="star5" name="rating" value="4" />
+                        <label for="star5" title="5 star"></label>
+                    </div>
                 </div>
                 <div class="menu-item">
                     <h3>Seafood Paella</h3>
                     <p>Traditional Spanish paella with shrimp, mussels, and chorizo.</p>
                     <span>$28.99</span>
+                    <div class="rating">
+                        <input type="radio" id="star1" name="rating" value="1" />
+                        <label for="star1" title="1 stars"></label>
+                        <input type="radio" id="star2" name="rating" value="2" />
+                        <label for="star2" title="2 stars"></label>
+                        <input type="radio" id="star3" name="rating" value="3" />
+                        <label for="star3" title="3 stars"></label>
+                        <input type="radio" id="star4" name="rating" value="4" />
+                        <label for="star4" title="4 stars"></label>
+                        <input type="radio" id="star5" name="rating" value="4" />
+                        <label for="star5" title="5 star"></label>
+                    </div>
                 </div>
                 <div class="menu-item">
                     <h3>Cedar Plank Salmon</h3>
                     <p>Salmon cooked on a cedar plank, served with wild rice pilaf.</p>
                     <span>$22.99</span>
+                    <div class="rating">
+                        <input type="radio" id="star1" name="rating" value="1" />
+                        <label for="star1" title="1 stars"></label>
+                        <input type="radio" id="star2" name="rating" value="2" />
+                        <label for="star2" title="2 stars"></label>
+                        <input type="radio" id="star3" name="rating" value="3" />
+                        <label for="star3" title="3 stars"></label>
+                        <input type="radio" id="star4" name="rating" value="4" />
+                        <label for="star4" title="4 stars"></label>
+                        <input type="radio" id="star5" name="rating" value="4" />
+                        <label for="star5" title="5 star"></label>
+                    </div>
                 </div>
                 <div class="menu-item">
                     <h3>Crab Cakes</h3>
                     <p>House-made crab cakes served with remoulade sauce.</p>
                     <span>$22.99</span>
+                    <div class="rating">
+                        <input type="radio" id="star1" name="rating" value="1" />
+                        <label for="star1" title="1 stars"></label>
+                        <input type="radio" id="star2" name="rating" value="2" />
+                        <label for="star2" title="2 stars"></label>
+                        <input type="radio" id="star3" name="rating" value="3" />
+                        <label for="star3" title="3 stars"></label>
+                        <input type="radio" id="star4" name="rating" value="4" />
+                        <label for="star4" title="4 stars"></label>
+                        <input type="radio" id="star5" name="rating" value="4" />
+                        <label for="star5" title="5 star"></label>
+                    </div>
                 </div>
                 <div class="menu-item">
                     <h3>Crab Alfredo</h3>
                     <p>Fettuccine pasta with crab meat and Alfredo sauce.</p>
                     <span>$26.99</span>
+                    <div class="rating">
+                        <input type="radio" id="star1" name="rating" value="1" />
+                        <label for="star1" title="1 stars"></label>
+                        <input type="radio" id="star2" name="rating" value="2" />
+                        <label for="star2" title="2 stars"></label>
+                        <input type="radio" id="star3" name="rating" value="3" />
+                        <label for="star3" title="3 stars"></label>
+                        <input type="radio" id="star4" name="rating" value="4" />
+                        <label for="star4" title="4 stars"></label>
+                        <input type="radio" id="star5" name="rating" value="4" />
+                        <label for="star5" title="5 star"></label>
+                    </div>
                 </div>
             </div>
         </section>
@@ -191,31 +335,103 @@
                     <h3>Sea Breeze</h3>
                     <p>Vodka, cranberry juice, and grapefruit juice.</p>
                     <span>$8.99</span>
+                    <div class="rating">
+                        <input type="radio" id="star1" name="rating" value="1" />
+                        <label for="star1" title="1 stars"></label>
+                        <input type="radio" id="star2" name="rating" value="2" />
+                        <label for="star2" title="2 stars"></label>
+                        <input type="radio" id="star3" name="rating" value="3" />
+                        <label for="star3" title="3 stars"></label>
+                        <input type="radio" id="star4" name="rating" value="4" />
+                        <label for="star4" title="4 stars"></label>
+                        <input type="radio" id="star5" name="rating" value="4" />
+                        <label for="star5" title="5 star"></label>
+                    </div>
                 </div>
                 <div class="menu-item">
                     <h3>Classic Mojito</h3>
                     <p>White rum, fresh mint, lime, sugar, and soda water.</p>
                     <span>$9.99</span>
+                    <div class="rating">
+                        <input type="radio" id="star1" name="rating" value="1" />
+                        <label for="star1" title="1 stars"></label>
+                        <input type="radio" id="star2" name="rating" value="2" />
+                        <label for="star2" title="2 stars"></label>
+                        <input type="radio" id="star3" name="rating" value="3" />
+                        <label for="star3" title="3 stars"></label>
+                        <input type="radio" id="star4" name="rating" value="4" />
+                        <label for="star4" title="4 stars"></label>
+                        <input type="radio" id="star5" name="rating" value="4" />
+                        <label for="star5" title="5 star"></label>
+                    </div>
                 </div>
                 <div class="menu-item">
                     <h3>Old Fashioned</h3>
                     <p>Bourbon, sugar, bitters, and an orange twist.</p>
                     <span>$10.99</span>
+                    <div class="rating">
+                        <input type="radio" id="star1" name="rating" value="1" />
+                        <label for="star1" title="1 stars"></label>
+                        <input type="radio" id="star2" name="rating" value="2" />
+                        <label for="star2" title="2 stars"></label>
+                        <input type="radio" id="star3" name="rating" value="3" />
+                        <label for="star3" title="3 stars"></label>
+                        <input type="radio" id="star4" name="rating" value="4" />
+                        <label for="star4" title="4 stars"></label>
+                        <input type="radio" id="star5" name="rating" value="4" />
+                        <label for="star5" title="5 star"></label>
+                    </div>
                 </div>
                 <div class="menu-item">
                     <h3>Pina Colada</h3>
                     <p>Rum, coconut cream, pineapple juice, and crushed ice.</p>
                     <span>$9.99</span>
+                    <div class="rating">
+                        <input type="radio" id="star1" name="rating" value="1" />
+                        <label for="star1" title="1 stars"></label>
+                        <input type="radio" id="star2" name="rating" value="2" />
+                        <label for="star2" title="2 stars"></label>
+                        <input type="radio" id="star3" name="rating" value="3" />
+                        <label for="star3" title="3 stars"></label>
+                        <input type="radio" id="star4" name="rating" value="4" />
+                        <label for="star4" title="4 stars"></label>
+                        <input type="radio" id="star5" name="rating" value="4" />
+                        <label for="star5" title="5 star"></label>
+                    </div>
                 </div>
                 <div class="menu-item">
                     <h3>Margarita</h3>
                     <p>Tequila, lime juice, and triple sec, served with salt on the rim.</p>
                     <span>$10.99</span>
+                    <div class="rating">
+                        <input type="radio" id="star1" name="rating" value="1" />
+                        <label for="star1" title="1 stars"></label>
+                        <input type="radio" id="star2" name="rating" value="2" />
+                        <label for="star2" title="2 stars"></label>
+                        <input type="radio" id="star3" name="rating" value="3" />
+                        <label for="star3" title="3 stars"></label>
+                        <input type="radio" id="star4" name="rating" value="4" />
+                        <label for="star4" title="4 stars"></label>
+                        <input type="radio" id="star5" name="rating" value="4" />
+                        <label for="star5" title="5 star"></label>
+                    </div>
                 </div>
                 <div class="menu-item">
                     <h3>Whiskey Sour</h3>
                     <p>Bourbon, lemon juice, and simple syrup, garnished with a cherry and orange slice.</p>
                     <span>$11.99</span>
+                    <div class="rating">
+                        <input type="radio" id="star1" name="rating" value="1" />
+                        <label for="star1" title="1 stars"></label>
+                        <input type="radio" id="star2" name="rating" value="2" />
+                        <label for="star2" title="2 stars"></label>
+                        <input type="radio" id="star3" name="rating" value="3" />
+                        <label for="star3" title="3 stars"></label>
+                        <input type="radio" id="star4" name="rating" value="4" />
+                        <label for="star4" title="4 stars"></label>
+                        <input type="radio" id="star5" name="rating" value="4" />
+                        <label for="star5" title="5 star"></label>
+                    </div>
                 </div>
             </div>
         </section>
@@ -228,26 +444,86 @@
                     <h3>Garlic Parmesan Fries</h3>
                     <p>French fries tossed in garlic butter and parmesan cheese.</p>
                     <span>$6.99</span>
+                    <div class="rating">
+                        <input type="radio" id="star1" name="rating" value="1" />
+                        <label for="star1" title="1 stars"></label>
+                        <input type="radio" id="star2" name="rating" value="2" />
+                        <label for="star2" title="2 stars"></label>
+                        <input type="radio" id="star3" name="rating" value="3" />
+                        <label for="star3" title="3 stars"></label>
+                        <input type="radio" id="star4" name="rating" value="4" />
+                        <label for="star4" title="4 stars"></label>
+                        <input type="radio" id="star5" name="rating" value="4" />
+                        <label for="star5" title="5 star"></label>
+                    </div>
                 </div>
                 <div class="menu-item">
                     <h3>Truffle Mac and Cheese</h3>
                     <p>Macaroni pasta in a creamy truffle-infused cheese sauce.</p>
                     <span>$8.99</span>
+                    <div class="rating">
+                        <input type="radio" id="star1" name="rating" value="1" />
+                        <label for="star1" title="1 stars"></label>
+                        <input type="radio" id="star2" name="rating" value="2" />
+                        <label for="star2" title="2 stars"></label>
+                        <input type="radio" id="star3" name="rating" value="3" />
+                        <label for="star3" title="3 stars"></label>
+                        <input type="radio" id="star4" name="rating" value="4" />
+                        <label for="star4" title="4 stars"></label>
+                        <input type="radio" id="star5" name="rating" value="4" />
+                        <label for="star5" title="5 star"></label>
+                    </div>
                 </div>
                 <div class="menu-item">
                     <h3>Grilled Asparagus</h3>
                     <p>Fresh asparagus spears grilled with olive oil and sea salt.</p>
                     <span>$7.99</span>
+                    <div class="rating">
+                        <input type="radio" id="star1" name="rating" value="1" />
+                        <label for="star1" title="1 stars"></label>
+                        <input type="radio" id="star2" name="rating" value="2" />
+                        <label for="star2" title="2 stars"></label>
+                        <input type="radio" id="star3" name="rating" value="3" />
+                        <label for="star3" title="3 stars"></label>
+                        <input type="radio" id="star4" name="rating" value="4" />
+                        <label for="star4" title="4 stars"></label>
+                        <input type="radio" id="star5" name="rating" value="4" />
+                        <label for="star5" title="5 star"></label>
+                    </div>
                 </div>
                 <div class="menu-item">
                     <h3>Loaded Baked Potato</h3>
                     <p>A baked potato topped with cheese, bacon, sour cream, and chives.</p>
                     <span>$7.99</span>
+                    <div class="rating">
+                        <input type="radio" id="star1" name="rating" value="1" />
+                        <label for="star1" title="1 stars"></label>
+                        <input type="radio" id="star2" name="rating" value="2" />
+                        <label for="star2" title="2 stars"></label>
+                        <input type="radio" id="star3" name="rating" value="3" />
+                        <label for="star3" title="3 stars"></label>
+                        <input type="radio" id="star4" name="rating" value="4" />
+                        <label for="star4" title="4 stars"></label>
+                        <input type="radio" id="star5" name="rating" value="4" />
+                        <label for="star5" title="5 star"></label>
+                    </div>
                 </div>
                 <div class="menu-item">
                     <h3>Garlic Bread</h3>
                     <p>Buttery garlic breadsticks served with marinara sauce.</p>
                     <span>$5.99</span>
+                    <div class="rating">
+                        <input type="radio" id="star1" name="rating" value="1" />
+                        <label for="star1" title="1 stars"></label>
+                        <input type="radio" id="star2" name="rating" value="2" />
+                        <label for="star2" title="2 stars"></label>
+                        <input type="radio" id="star3" name="rating" value="3" />
+                        <label for="star3" title="3 stars"></label>
+                        <input type="radio" id="star4" name="rating" value="4" />
+                        <label for="star4" title="4 stars"></label>
+                        <input type="radio" id="star5" name="rating" value="4" />
+                        <label for="star5" title="5 star"></label>
+                    </div>
                 </div>
             </div>
         </section>
