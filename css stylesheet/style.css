@@ -144,6 +144,15 @@ span{
 .web-links{
     margin-left: 5%;
     margin-right:175px ;
+    /* STUFF ADDED BY KATELYNN BELLOW**/
+    position: relative;
+    padding-bottom: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10em;
+    text-align: center;
+    margin-bottom: 10px;
 }
  /**   margin: 50px;
     padding-top: 8em;
@@ -234,6 +243,9 @@ span{
         display: inline-block;
         padding: 0%;
         font-size: 3em;
+    }
+    .web-links {
+        /*Remove display:none*/
     }
 }
 #footer_div{
