@@ -300,23 +300,10 @@ background-color: rgba(0, 255, 255, 0.486);}
 
 
     
-<<<<<<< HEAD
 
-=======
 
-.web-links{
-    margin-left: 5%;
-    margin-right:175px ;
+
     /* STUFF ADDED BY KATELYNN BELLOW**/
-    position: relative;
-    padding-bottom: 5em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10em;
-    text-align: center;
-    margin-bottom: 10px;
-}
  
 #opt-link1{
     margin-top: 1em;
@@ -425,4 +412,3 @@ background-color: rgba(0, 255, 255, 0.486);}
 .web-links-one{
      padding: auto;
     text-align: center;}
->>>>>>> 0d219e7ef4177cbf08e839ad3d52132474ed68cb
