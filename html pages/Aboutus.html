@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css stylesheet/style.css">
+
 <style>
 /* Style the element with the id "myHeader" */
 #myHeader {
@@ -213,6 +214,8 @@ p {font-size: 20px;}
             border: 2px solid navy;
             border-radius: 5px;
             transition: background-color 0.3s, color 0.3s;
+            flex: 1 0 auto;
+            max-width:150px;
         }
         .web-links-one a:hover {
             background-color: navy;
@@ -233,6 +236,10 @@ p {font-size: 20px;}
   }
   .myHeader {
     width: 100%;
+  }
+  .web-links-one a {
+    width: 100%;
+    max-width: none;
   }
   }
 </style>
@@ -407,7 +414,6 @@ p {font-size: 20px;}
 
   <div style="display: flex; justify-content: left;"></div>
   <label for="" style="width: 0"></label>
-  <span style="color: black; font-weight: lighter;">Thank you for filling in our Contact form.</span><br><br>
   <button class="gradient-button">Submit</button>
   <p>𓇼 ⋆｡˚ 𓆝⋆｡˚ 𓇼</p>
 </form>
