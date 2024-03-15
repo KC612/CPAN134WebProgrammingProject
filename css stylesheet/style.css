@@ -187,14 +187,19 @@ body{
     color: rgb(252, 0, 0);
    
 }
-@media(max-width:1400px){
-    .web-links{
+@media(max-width:1200px){
+    .home{
        padding: 2em 2em;
     }
 }
 @media(max-width:1025px){
-    .web-links{
+    .home{
        display: none;
+    }
+}
+@media(min-width:1200px){
+    .home{
+        margin-bottom: 5em;
     }
 }
 
