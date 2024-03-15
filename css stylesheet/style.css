@@ -128,7 +128,7 @@ body{
 
 .header-title{
     position: relative;
-    padding-bottom: 2.3em;
+    padding-bottom: 2em;
     margin-bottom: .7em;
     text-align: center;
     max-width: auto;
@@ -161,7 +161,7 @@ body{
     align-items: center;
     justify-content: center;
     padding:1em 3em ;
-    color: rgb(197, 25, 25);
+    color: rgb(252, 0, 0);
    
 }
 @media(max-width:1025px){
@@ -183,7 +183,7 @@ body{
 }
 @media(max-width:1000px){
     #opt-link1{
-        width: 2000px;
+        max-width: 100%;
         position: relative;
         display: flex;
         flex-wrap: wrap;
@@ -290,18 +290,6 @@ background-color: rgba(0, 255, 255, 0.486);}
 .web-links-one{
      padding: auto;
     text-align: center;}
-
-
-
-
-
-
-
-
-
-    
-
-
 
     /* STUFF ADDED BY KATELYNN BELLOW**/
  
