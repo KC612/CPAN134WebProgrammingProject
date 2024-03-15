@@ -3,7 +3,97 @@
     margin: 0px;
     padding: 0px;
 }
+:root{
+    --animation-timing: 200ms ease-in-out;
+}
+.hamberger-menu{
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+    width: max-content;
+    position: absolute;
+    top: 65%;
+    cursor: pointer;
+    
+}
+@media(min-width:1025px){
+    .hamberger-menu{
+        display: none;
+    }
+}
+@media(max-width:1025px){
+    .hamberger-menu{
+        position: absolute;
+        top: 60%;
+    }
+}
 
+.hamberger-menu::before,
+.hamberger-menu::after,
+.hamberger-menu input{
+    content: "";
+    width: 50px;
+    height: 8px;
+    background-color: black;
+    border-radius: 9999px;
+    /**transition: opacity var(--animation-timing), width var(--animation-timing);**/
+}
+@media(max-width:1025px){
+    .hamberger-menu::before,
+    .hamberger-menu::after,
+    .hamberger-menu input{
+    content: "";
+    width: 100px;
+    height: 20px;
+
+
+}
+}
+.hamberger-menu input {
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    pointer-events: none;
+}
+/**.hamberger-menu input:checked{
+    opacity: 0;
+    width: 0;
+}**/
+.sidebar{
+    transition: var(--animation-timing);
+    translate: -1000%;
+    background-color: rgba(58, 62, 66, 0.486);
+    padding: 0.5rem, .5rem;
+    padding-top: 2rem;
+    max-width: 30rem;
+    height: 20vh;
+    z-index: 5;
+}
+@media (max-width:1025px){
+    .sidebar{
+        font-size: 3em;
+        height: auto;
+        width: auto;
+        padding-top: 0;
+        background-color: rgba(58, 62, 66, 0.486);
+        padding-left: 0;
+        margin-left: 0;
+
+    }
+}
+@media(min-width:1025px){
+    .sidebar{
+        display: none;
+    }
+}
+.sidebar a {
+    display: flex;
+    padding: 5px;
+}
+.hamberger-menu:has(input:checked) + .sidebar{
+    translate: 0;
+}
 body{
     margin: 1em;
     max-width: 100%;
@@ -17,7 +107,6 @@ body{
     text-align: center;    
     max-width: auto;
     
-    
 }
 
 .header-vid{
@@ -25,11 +114,12 @@ body{
     overflow-y: hidden;
     overflow: hidden;
     max-height: 70vh;
-    max-width: auto;
+    max-width: 2000px;
+    
 }
-@media (min-width:768px ) {
+@media (min-width:500px ) {
     .div-header{
-       width: auto;
+       width: 100%;
        height: auto;
     }
     
@@ -39,35 +129,190 @@ body{
 .header-title{
     position: relative;
     padding-bottom: 2.3em;
+    margin-bottom: .7em;
     text-align: center;
     max-width: auto;
     font-size: 9em;
     color: rgba(121, 218, 218, 0.694);
 }
-@media (max-width:938px){
+@media (max-width:1000px){
     .header-title{
-        font-size: 8em;
-        padding-bottom: 3em;
+        position: relative;
+        font-size: 9em;
+
+        
+    }
+}
+@media(max-width:928px){
+    .header-title{
+        padding-bottom: 1.5em;
+    }
+}
+@media(max-width:484px){
+    .header-title{
+        font-size: 7em;
+        padding-bottom: .75em;
+        margin-left: 50%;
     }
 }
 .web-links{
     position: relative;
-    padding-bottom: 5em;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10em;
-    text-align: center;
-    margin-bottom: 10px;
-    color: rgb(255, 255, 255);
+    padding:1em 3em ;
+    color: rgb(197, 25, 25);
+   
 }
-@media(max-width:938px){
+@media(max-width:1025px){
     .web-links{
-        display: none;
+       display: none;
     }
 }
 
-.nav-bar{
+#opt-link1{
+    margin-top: 1em;
+    padding-top: 2em;
+    margin-bottom: 100px;
+    max-width: 2000px;
+    position: relative;
+    display: grid;
+    gap: 3em;
+    grid-template-columns:repeat(2, 1fr) ;
+    grid-template-rows:2, 1fr;
+}
+@media(max-width:1000px){
+    #opt-link1{
+        width: 2000px;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10em;
+    }
+}
+
+
+
+#opt-dining{
+    max-width: auto;
+    text-align: center;
+    color: aliceblue;
+    font-size: 11em;  
+}
+#menu-link-dining{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6em;
+    color: rgba(121, 218, 218, 0.588);
+}
+
+#opt-dining-img{
+    width: 100%;
+    background-image: url(/resources/diningv1p1.jpeg);
+}
+
+
+#opt-events{
+    max-width: auto;
+    text-align: center;
+    color: aliceblue;
+    font-size: 11em;
+}
+#opt-events-img{
+    width: 100%;
+    background-image: url(/resources/projecteventsv1p1.jpg);
+    background-size: cover;
+
+}
+#events-link{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6em;
+    color: rgba(121, 218, 218, 0.588);
+}
+.footer{
+    max-width: 100%; 
+}
+
+.footer-link{
+    display: inline-block;
+    align-items: center;
+    padding: 5px;
+    margin-right: 5px;
+    padding: 10px;
+}
+/**@media(max-width:938px){
+    .footer-link{
+        display: inline-block;
+        padding: 0%;
+        font-size: 3em;
+    }
+}**/
+#footer_div{
+    border-bottom: 3px solid black;
+}
+.footer-div{
+    display: inline-block;
+    padding: 10em 0em;
+}
+@media(max-width:1200px){
+    .footer-div{
+        font-size: 3em;        
+    }
+}
+
+.main-div{
+    margin-left: 30%;
+    margin-right: 30%;
+    display: grid;
+    gap: 1.5rem;
+}
+#main-header-blog{
+    margin-top: 20%;
+    margin-bottom: 10%;
+    text-align: center;
+}
+.event-border-hover{
+    cursor: pointer;
+    border: 5px solid black;
+}
+.event-border-hover:hover{
+    transform: scale(1.5);
+    transition: ease-in-out, 250ms;
+    padding: 4em;
+    margin-bottom: 5em;
+background-color: rgba(0, 255, 255, 0.486);}
+    
+.web-links-one{
+     padding: auto;
+    text-align: center;}
+
+
+
+
+
+
+
+
+
+    /**
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label">
+        <span >MENU</span>
+    </label>
+    <ul class="nav-bar">
+        <a href="Homepage.html"><li>HOME</li></a>
+        <a href="menu.html"><li>DINING</li></a>
+        <a href="Aboutus.html"><li>ABOUT US</li></a>
+        <a href="contactus.html"><li>CONTACT US</li></a>
+        <a href="Blog.html"><li>BLOG</li></a>
+
+    </ul>
+    .nav-bar{
     position: absolute;
     z-index: 2;
     right: 10%;
@@ -125,137 +370,4 @@ span{
     
        
     }
-}
-
-/**.web-link1{
-    margin-right: 175px;
-/**.web-link1{
-    margin-right: 160px;
-}
-.web-link2{
-    margin-right:160px;
-}
-.web-link3{
-    margin-right: 160px;
-}
-.web-link4{
-    margin-right:160px;
 }**/
-.web-links{
-    margin-left: 5%;
-    margin-right:175px ;
-}
- /**   margin: 50px;
-    padding-top: 8em;
-    position: relative;
-    color: aliceblue;
-    align-items: center;**/
-
-
-
-
-
-#opt-link1{
-    margin-top: 1em;
-    padding-top: 5em;
-    margin-bottom: 100px;
-    max-width: auto;
-    position: relative;
-    display: grid;
-    gap: 3em;
-    grid-template-columns:repeat(2, 1fr) ;
-    grid-template-rows:2, 1fr;
-}
-@media(max-width:938px){
-    #opt-link1{
-        position: relative;
-        display: grid;
-        grid-template-columns: 1fr;
-
-    }
-}
-
-}
-
-/** grid-template-columns:repeat(2, 1fr) ;
-    grid-template-rows:2, 1fr;**/
-
-#opt-dining{
-    max-width: auto;
-    text-align: center;
-    color: aliceblue;
-    font-size: 11em;  
-}
-#menu-link-dining{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 6em;
-    color: rgba(121, 218, 218, 0.588);
-}
-
-#opt-dining-img{
-    width: 100%;
-    background-image: url(/resources/diningv1p1.jpeg);
-}
-#opt-events{
-    max-width: auto;
-    color: aliceblue;
-    font-size: 11em;
-}
-#opt-events-img{
-    max-width: auto;
-    text-align: center;
-    background-image: url(/resources/projecteventsv1p1.jpg);
-    background-size: cover;
-}
-#events-link{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 6em;
-    color: rgba(121, 218, 218, 0.588);
-}
-.footer{
-    width: 75%;
-    
-}
-.footer-link{
-    display: inline-block;
-    align-items: center;
-    padding: 5px;
-    margin-right: 5px;
-    padding: 10px;
-}
-@media(max-width:938px){
-    .footer-link{
-        display: inline-block;
-        padding: 0%;
-        font-size: 3em;
-    }
-}
-#footer_div{
-    border-bottom: 3px solid black;
-}
-.main-div{
-    margin-left: 30%;
-    margin-right: 30%;
-    display: grid;
-    gap: 1.5rem;
-}
-#main-header-blog{
-    margin-top: 20%;
-    margin-bottom: 10%;
-    text-align: center;
-}
-.event-border-hover{
-    cursor: pointer;
-    border: 5px solid black;
-
-   
-}
-.web-links-one{
-     padding: auto;
-    text-align: center;}
