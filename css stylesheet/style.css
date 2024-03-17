@@ -5,8 +5,8 @@
     width: 100vw;
     overflow-x: hidden;
 }
-body{
-    background-image: url(/resources/project1\ backgroundv1p1.png);
+.body{
+    background-image: url(/resources/project1\ background.png);
    
 }
 :root{
