@@ -2,6 +2,12 @@
 *{
     margin: 0px;
     padding: 0px;
+    width: 100vw;
+    overflow-x: hidden;
+}
+body{
+    background-image: url(/resources/project1\ backgroundv1p1.png);
+   
 }
 :root{
     --animation-timing: 200ms ease-in-out;
@@ -12,21 +18,22 @@
     gap: 10px;
     width: max-content;
     position: absolute;
-    top: 65%;
+    top: 0vh;
     cursor: pointer;
+    z-index: 5;
     
 }
-@media(min-width:1025px){
+@media(min-width:766px){
     .hamberger-menu{
         display: none;
     }
 }
-@media(max-width:1025px){
+/**@media(max-width:1025px){
     .hamberger-menu{
         position: absolute;
         top: 60%;
     }
-}
+}**/
 
 .hamberger-menu::before,
 .hamberger-menu::after,
@@ -38,13 +45,13 @@
     border-radius: 9999px;
     /**transition: opacity var(--animation-timing), width var(--animation-timing);**/
 }
-@media(max-width:1025px){
+/@media(max-width:425px){
     .hamberger-menu::before,
     .hamberger-menu::after,
     .hamberger-menu input{
     content: "";
-    width: 100px;
-    height: 20px;
+    width: 9vw;
+    height: .5vh;
 
 
 }
@@ -61,16 +68,21 @@
     width: 0;
 }**/
 .sidebar{
+    position: absolute;
+    top: 10vh;
     transition: var(--animation-timing);
     translate: -1000%;
     background-color: rgba(58, 62, 66, 0.486);
     padding: 0.5rem, .5rem;
     padding-top: 2rem;
     max-width: 30rem;
-    height: 20vh;
-    z-index: 5;
+    height: 100vh; 
+    z-index: 4; 
 }
-@media (max-width:1025px){
+nav a{
+    color: aliceblue;
+}
+/**@media (max-width:1025px){
     .sidebar{
         font-size: 3em;
         height: auto;
@@ -86,20 +98,13 @@
     .sidebar{
         display: none;
     }
-}
+}**/
 .sidebar a {
     display: flex;
     padding: 5px;
 }
 .hamberger-menu:has(input:checked) + .sidebar{
     translate: 0;
-}
-body{
-    margin: 1em;
-    max-width: 100%;
-    overflow-x:hidden;
-    background-image: url(/resources/project1\ backgroundv1p1.png);
-   
 }
 
 .div-header{
@@ -109,41 +114,42 @@ body{
     
 }
 
+/**THE CODE BELOW CONTROLS THE VIDEO ON THE HOME PAGE**/
 .header-vid{
     position: absolute;
     overflow-y: hidden;
     overflow: hidden;
     max-height: 70vh;
-    max-width: 2000px;
     
 }
-@media (min-width:500px ) {
+/**@media (min-width:500px ) {
     .div-header{
        width: 100%;
        height: auto;
     }
     
-}
+}**/
 
-
+/**THE CODE BELOW CONTROLS THE MAIN HEADER ON HOME PAGE**/
 .header-title{
-    position: relative;
+    position: absolute;
+    
     padding-bottom: 2em;
-    margin-bottom: .7em;
     text-align: center;
-    max-width: auto;
+    max-width: 100%;
     font-size: 9em;
     color: rgba(121, 218, 218, 0.694);
 }
-@media (max-width:1000px){
+@media (max-width:767px){
     .header-title{
+        margin-top: 13vh;
         position: relative;
-        font-size: 9em;
+        font-size: 3em;
 
         
     }
 }
-@media(max-width:928px){
+/**@media(max-width:928px){
     .header-title{
         padding-bottom: 1.5em;
     }
@@ -154,34 +160,81 @@ body{
         padding-bottom: .75em;
         margin-left: 50%;
     }
-}
+}**/
+
+/**THE CODE BELOW CONTROLS THE LINKS TO THE WEBSITE PAGE**/
 .web-links{
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding:1em 3em ;
+    padding: 2%;
+    padding-bottom: 3%;
+    margin-top: 60vh;
+    margin-bottom: 5%;
     color: rgb(252, 0, 0);
    
 }
-@media(max-width:1025px){
+@media(min-width:1441px){
+    .web-links{
+    font-size: 1.3em;
+    margin-top: 56vh;
+
+    }
+}
+@media(max-width:767px){
     .web-links{
        display: none;
     }
 }
 
-#opt-link1{
+
+/**THE CODE BELOW CONTROLS THE DIV TO THE MENU & BLOG PAGE**/
+#opt-link2{
+    position: absolute;
+    max-width: 100VW;
+}
+
+
+
+/**THE CODE BELOW CONTROLS THE LINKS TO THE MENU PAGE**/
+#opt-dining{
+    max-width: 100%;
+    font-size: 9em;
+    text-align: center;
+    color: aliceblue;
+}
+#opt-dining-img{
+    max-width: 100vw;
+    background-image: url(/resources/diningv1p1.jpeg);
+}
+
+
+
+
+
+/**THE CODE BELOW CONTROLS THE LINKS TO THE BLOG PAGE**/
+#opt-events{
+        position: relative;
+        max-width: 100%;
+        font-size: 9em;
+        text-align: center;
+        color: aliceblue;
+}
+#opt-events-img{
+    max-width: 100vw;    
+    background-image: url(/resources/projecteventsv1p1.jpg);
+    background-size: cover;
+}
+
+
+
+/**#opt-link2{
     margin-top: 1em;
     padding-top: 2em;
-    margin-bottom: 100px;
-    max-width: 2000px;
     position: relative;
     display: grid;
     gap: 3em;
-    grid-template-columns:repeat(2, 1fr) ;
-    grid-template-rows:2, 1fr;
+    grid-template-columns:repeat(2, 1fr);
 }
-@media(max-width:1000px){
+/**@media(max-width:1000px){
     #opt-link1{
         max-width: 100%;
         position: relative;
@@ -189,14 +242,16 @@ body{
         flex-wrap: wrap;
         gap: 10em;
     }
-}
+}**/
 
 
-
-#opt-dining{
-    max-width: auto;
+/**#opt-dining{
+    font-size: 2em;
     text-align: center;
     color: aliceblue;
+    color: aliceblue;
+    font-size: 11em;  
+    color: aliceblue; 
     font-size: 11em;  
 }
 #menu-link-dining{
@@ -209,7 +264,7 @@ body{
 }
 
 #opt-dining-img{
-    width: 100%;
+    
     background-image: url(/resources/diningv1p1.jpeg);
 }
 
@@ -221,7 +276,6 @@ body{
     font-size: 11em;
 }
 #opt-events-img{
-    width: 100%;
     background-image: url(/resources/projecteventsv1p1.jpg);
     background-size: cover;
 
@@ -233,10 +287,8 @@ body{
     align-items: center;
     font-size: 6em;
     color: rgba(121, 218, 218, 0.588);
-}
-.footer{
-    max-width: 100%; 
-}
+}**/
+
 
 .footer-link{
     display: inline-block;
@@ -293,7 +345,7 @@ background-color: rgba(0, 255, 255, 0.486);}
 
     /* STUFF ADDED BY KATELYNN BELLOW**/
  
-#opt-link1{
+/**#opt-link1{
     margin-top: 1em;
     padding-top: 5em;
     margin-bottom: 100px;
@@ -304,21 +356,21 @@ background-color: rgba(0, 255, 255, 0.486);}
     grid-template-columns:repeat(2, 1fr) ;
     grid-template-rows:2, 1fr;
 }
-@media(max-width:938px){
+/**@media(max-width:938px){
     #opt-link1{
         position: relative;
         display: grid;
         grid-template-columns: 1fr;
 
     }
-}
+}**/
 
 
 
 /** grid-template-columns:repeat(2, 1fr) ;
     grid-template-rows:2, 1fr;**/
 
-#opt-dining{
+/**#opt-dining{
     max-width: auto;
     text-align: center;
     color: aliceblue;
@@ -359,24 +411,6 @@ background-color: rgba(0, 255, 255, 0.486);}
 .footer{
     width: 75%;
     
-}
-.footer-link{
-    display: inline-block;
-    align-items: center;
-    padding: 5px;
-    margin-right: 5px;
-    padding: 10px;
-}
-@media(max-width:938px){
-    .footer-link{
-        display: inline-block;
-        padding: 0%;
-        font-size: 3em;
-    }
-    .web-links {
-        /*Remove display:none*/
-    }
-}
 #footer_div{
     border-bottom: 3px solid black;
 }
