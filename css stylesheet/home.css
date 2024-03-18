@@ -139,6 +139,9 @@ nav a{
 
 /**THIS CODE CONTROLS THE EVENTS & MENU LINKS ON THE HOME PAGE**/
 #opt-link2{
+    position: relative;
+    max-width: 100vw;
+    overflow: hidden;
     display: grid;
     gap: 3em;
 }
