@@ -231,119 +231,17 @@ float: left;
     <a class="web-links web-link5" href="Careers.html">CAREERS</a>
   </div>
   <h1>This Page is under construction & will be converted into an "add to cart" page to take <strong>your</strong> orders!</h1>
-<!-- An element with a unique id -->
-<!-- <div>
-<h1 id="myHeader">Contact Us</h1>
-<img src="/resources/transseafood.png" width="550" height="750" alt="image" style="float: left;margin-right: 5px; margin-bottom: 5px;">
-<span style="color:navy;">We would love to hear from you! Whether you have a question, or feedback, or just want to say hello, don't hesitate to reach out. Our team at BigFin is here to ensure your dining experience is nothing short of exceptional. Fill out the form below, and we'll get back to you as soon as possible. Alternatively, you can also reach us directly via email, vist us in person, or check out our blog page for updates. We can't wait to connect with you and welcome you to our culinary haven!</span>
-<img src="/resources/Lobsterpic2.png" width="550" height="650" alt="image" style="float: right;margin-left: 5px; margin-bottom: 5px;">
-<br><br>-->
-
-<!-- Multiple elements with same class 
-<form method="post">
-    <h1>Contact Form</h1>
-    <div>
-        <label for="Firstname">Name</label>
-        <input class="red" type="text" name="name" placeholder="Enter full name" required><br><br>
-    </div>
-    <div>
-    <label for="Email Address">Email Address</label>
-    <input class=red type="email" name="email" placeholder="Enter your email" required><br><br>
-    </div>
-    <div>
-   Phone Number &nbsp;&nbsp;&nbsp;&nbsp;<br>
-     <select name="PhoneNumber">
-        <optgroup lable="PhoneNumber">
-            <option value="1">+1</option>
-            <option value="2">+2</option>
-            <option value="3">+3</option>
-            <option value="4">+4</option>
-            <option value="5">+5</option>
-            <option value="6">+6</option>
-            <option value="7">+7</option>
-            <option value="8">+8</option>
-            <option value="9">+9</option>
-            <input type="text" name="Phone_Number" placeholder="Enter your phone number" required><br><br>
-        </div>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="vist">Rate Your Experience</label><br>
-    <input type="range" name="vist" id="vist" min="1" max="5" step="1"><br><br>
-
-    <div style="display: flex; justify-content: left;"></div>
-    <label for="" style="width: 0"></label>
-    <span style="color: black; font-weight: lighter;">Thank you for filling in our Contact form.</span><br><br>
-    <button class="gradient-button">Submit</button>
-    <p>𓇼 ⋆｡˚ 𓆝⋆｡˚ 𓇼</p>
-</form>
-
-<h2 class="funfact">Commonly Asked Questions</h2>
-<div class="faqs-container">
-
-    <div class="questions-container">
-      <div class="content-container">
-        <div class="faq-header">
-          <h3>How do I purchase a membership?</h3>
-          <span class="open active">+</span>
-          <span class="close">-</span>
-        </div>
-
-        <div class="content">
-          <p>
-            Fill in our contact form, email us, or sign up in person!
-          </p>
-
-          <p>
-            We appreciate your interest in BigFin.
-          </p>
-        </div>
-      </div>
-
-      <div class="content-container">
-        <div class="faq-header">
-          <h3>How do I cancel a membership?</h3>
-          <span class="open active">+</span>
-          <span class="close">-</span>
-        </div>
-
-        <div class="content">
-          <p>
-            Fill in our contact form or send us an email and we we do our best to give you a speedy responce. Alternatively you could visit us in person to cancel your membership immediately.
-          </p>
-        </div>
-      </div>
-
-      <div class="content-container">
-        <div class="faq-header">
-          <h3>Allergies / Dietary Restrictions</h3>
-          <span class="open active">+</span>
-          <span class="close">-</span>
-        </div>
-
-        <div class="content">
-          <p>
-            As BigFin specializes in surf and turf we can not absolutely guarantee that no cross contamination will occur. Please be aware of this when ordering.
-          </p>
-
-          <p>
-            Thank you for your patience as we aim to make BigFin a welcoming place for everyone.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="/javascript/main.js"></script>
-
-<h2 class="funfact">Contact Information</h2>
-<address><span style="color: navy;">
-    <br> 
-    Contact at:<br>
-    <a href="mailto:kcaceres0612@gmail.com">Email</a><br>
-    190 Boulevard Wilfrid-Hamel<br>
-    Toronto, Ontario<br>
-    </address>
-    <footer>BigFin &copy; </footer>
-    </span>
-    <img src="/resources/transcrawdad.png" width="200" height="200" alt="image" style="float: left;margin-right: 5px;">
-  -->
+  <script>
+    // Retrieve the selected item from session storage
+    var selectedItem = sessionStorage.getItem('selectedItem');
+    
+    // Display the selected item on the page
+    if (selectedItem) {
+        var cartItemsDiv = document.getElementById('cart-items');
+        var itemParagraph = document.createElement('p');
+        itemParagraph.textContent = selectedItem;
+        cartItemsDiv.appendChild(itemParagraph);
+    }
+</script>
 </body>
 </html>

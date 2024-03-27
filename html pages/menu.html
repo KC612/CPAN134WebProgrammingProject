@@ -150,8 +150,7 @@
                 </nav>
                 <nav>
                     <div class="cart-button-container">
-                        
-                        <a href="contactus.html"><button id="cartBtn">Cart (0)</button></a>
+                        <button id="cartBtn" onclick="goToCartPage()">Cart (0)</button>
                     </div>
                 </nav>
                 </div>
@@ -179,8 +178,8 @@
                         <input type="radio" id="star5" name="rating" value="4" />
                         <label for="star5" title="5 star"></label>
                     </div>
-                    <button id ="Add To Cart">Add To Cart</button> <br><br>
-                    
+                    <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
+                    <button class="add-to-cart-btn" onclick="addToCart('fishtaco')">Add To Cart</button>
                 </div>
                 <div class="menu-item">
                     <h3>Shrimp Po' Boy</h3>
@@ -198,7 +197,8 @@
                         <input type="radio" id="star5" name="rating" value="4" />
                         <label for="star5" title="5 star"></label>
                     </div>
-                    <button id ="Add To Cart">Add To Cart</button> <br><br>
+                    <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
+                    <button class="add-to-cart-btn" onclick="addToCart('Shrimp Po')">Add To Cart</button>
                 </div>
                 <div class="menu-item">
                     <h3>Chicken Caesar Salad</h3>
@@ -216,7 +216,8 @@
                         <input type="radio" id="star5" name="rating" value="4" />
                         <label for="star5" title="5 star"></label>
                     </div>
-                    <button id ="Add To Cart">Add To Cart</button> <br><br>
+                    <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
+                    <button class="add-to-cart-btn" onclick="addToCart('salad')">Add to Cart</button>
                 </div>
                 <div class="menu-item">
                     <h3>Vegetarian Wrap</h3>
@@ -234,7 +235,8 @@
                         <input type="radio" id="star5" name="rating" value="4" />
                         <label for="star5" title="5 star"></label>
                     </div>
-                    <button id ="Add To Cart">Add To Cart</button> <br><br>
+                    <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
+                    <button class="add-to-cart-btn" onclick="addToCart('wrap')">Add to Cart</button>
                 </div>
                 <div class="menu-item">
                     <h3>Grilled Chicken Sandwich</h3>
@@ -252,7 +254,8 @@
                         <input type="radio" id="star5" name="rating" value="4" />
                         <label for="star5" title="5 star"></label>
                     </div>
-                    <button id ="Add To Cart">Add To Cart</button> <br><br>
+                    <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
+                    <button class="add-to-cart-btn" onclick="addToCart('sandwich')">Add to Cart</button>
                 </div>
           
             </div>
@@ -277,7 +280,8 @@
                         <input type="radio" id="star5" name="rating" value="4" />
                         <label for="star5" title="5 star"></label>
                     </div>
-                    <button id ="Add To Cart">Add To Cart</button> <br><br>
+                    <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
+                    <button class="add-to-cart-btn" onclick="addToCart('salmon')">Add to Cart</button>
                 </div>
                 <div class="menu-item">
                     <h3>Lobster Linguine</h3>
@@ -295,7 +299,8 @@
                         <input type="radio" id="star5" name="rating" value="4" />
                         <label for="star5" title="5 star"></label>
                     </div>
-                    <button id ="Add To Cart">Add To Cart</button> <br><br>
+                    <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
+                    <button class="add-to-cart-btn" onclick="addToCart('Linguine')">Add to Cart</button>
                 </div>
                 <div class="menu-item">
                     <h3>Seafood Paella</h3>
@@ -313,7 +318,8 @@
                         <input type="radio" id="star5" name="rating" value="4" />
                         <label for="star5" title="5 star"></label>
                     </div>
-                    <button id ="Add To Cart">Add To Cart</button> <br><br>
+                    <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
+                    <button class="add-to-cart-btn" onclick="addToCart('paella')">Add to Cart</button>
                 </div>
                 <div class="menu-item">
                     <h3>Cedar Plank Salmon</h3>
@@ -331,7 +337,8 @@
                         <input type="radio" id="star5" name="rating" value="4" />
                         <label for="star5" title="5 star"></label>
                     </div>
-                    <button id ="Add To Cart">Add To Cart</button> <br><br>
+                    <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
+                    <button class="add-to-cart-btn" onclick="addToCart('cederSalmon')">Add to Cart</button>
                 </div>
                 <div class="menu-item">
                     <h3>Crab Cakes</h3>
@@ -349,7 +356,8 @@
                         <input type="radio" id="star5" name="rating" value="4" />
                         <label for="star5" title="5 star"></label>
                     </div>
-                    <button id ="Add To Cart">Add To Cart</button> <br><br>
+                    <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
+                    <button class="add-to-cart-btn" onclick="addToCart('crab-cake')">Add to Cart</button>
                 </div>
                 <div class="menu-item">
                     <h3>Crab Alfredo</h3>
@@ -367,7 +375,8 @@
                         <input type="radio" id="star5" name="rating" value="4" />
                         <label for="star5" title="5 star"></label>
                     </div>
-                    <button id ="Add To Cart">Add To Cart</button> <br><br>
+                    <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
+                    <button class="add-to-cart-btn" onclick="addToCart('alfredo')">Add to Cart</button>
                 </div>
             </div>
         </section>
@@ -391,7 +400,8 @@
                         <input type="radio" id="star5" name="rating" value="4" />
                         <label for="star5" title="5 star"></label>
                     </div>
-                    <button id ="Add To Cart">Add To Cart</button> <br><br>
+                    <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
+                    <button class="add-to-cart-btn" onclick="addToCart('sea-breeze')">Add to Cart</button>
                 </div>
                 <div class="menu-item">
                     <h3>Classic Mojito</h3>
@@ -409,7 +419,8 @@
                         <input type="radio" id="star5" name="rating" value="4" />
                         <label for="star5" title="5 star"></label>
                     </div>
-                    <button id ="Add To Cart">Add To Cart</button> <br><br>
+                    <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
+                    <button class="add-to-cart-btn" onclick="addToCart('Mojito')">Add to Cart</button>
                 </div>
                 <div class="menu-item">
                     <h3>Old Fashioned</h3>
@@ -427,7 +438,8 @@
                         <input type="radio" id="star5" name="rating" value="4" />
                         <label for="star5" title="5 star"></label>
                     </div>
-                    <button id ="Add To Cart">Add To Cart</button> <br><br>
+                    <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
+                    <button class="add-to-cart-btn" onclick="addToCart('Old Fashioned')">Add to Cart</button>
                 </div>
                 <div class="menu-item">
                     <h3>Pina Colada</h3>
@@ -445,7 +457,8 @@
                         <input type="radio" id="star5" name="rating" value="4" />
                         <label for="star5" title="5 star"></label>
                     </div>
-                    <button id ="Add To Cart">Add To Cart</button> <br><br>
+                    <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
+                    <button class="add-to-cart-btn" onclick="addToCart('Pina Colada')">Add to Cart</button>
                 </div>
                 <div class="menu-item">
                     <h3>Margarita</h3>
@@ -463,7 +476,8 @@
                         <input type="radio" id="star5" name="rating" value="4" />
                         <label for="star5" title="5 star"></label>
                     </div>
-                    <button id ="Add To Cart">Add To Cart</button> <br><br>
+                    <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
+                    <button class="add-to-cart-btn" onclick="addToCart('Margarita')">Add to Cart</button>
                 </div>
                 <div class="menu-item">
                     <h3>Whiskey Sour</h3>
@@ -481,7 +495,8 @@
                         <input type="radio" id="star5" name="rating" value="4" />
                         <label for="star5" title="5 star"></label>
                     </div>
-                    <button id ="Add To Cart">Add To Cart</button> <br><br>
+                    <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
+                    <button class="add-to-cart-btn" onclick="addToCart('Whiskey Sour')">Add to Cart</button>
                 </div>
             </div>
         </section>
@@ -506,7 +521,8 @@
                         <input type="radio" id="star5" name="rating" value="4" />
                         <label for="star5" title="5 star"></label>
                     </div>
-                    <button id ="Add To Cart">Add To Cart</button> <br><br>
+                    <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
+                    <button class="add-to-cart-btn" onclick="addToCart('fries')">Add to Cart</button>
                 </div>
                 <div class="menu-item">
                     <h3>Truffle Mac and Cheese</h3>
@@ -524,7 +540,8 @@
                         <input type="radio" id="star5" name="rating" value="4" />
                         <label for="star5" title="5 star"></label>
                     </div>
-                    <button id ="Add To Cart">Add To Cart</button> <br><br>
+                    <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
+                    <button class="add-to-cart-btn" onclick="addToCart('Mac and cheese')">Add to Cart</button>
                 </div>
                 <div class="menu-item">
                     <h3>Grilled Asparagus</h3>
@@ -542,7 +559,8 @@
                         <input type="radio" id="star5" name="rating" value="4" />
                         <label for="star5" title="5 star"></label>
                     </div>
-                    <button id ="Add To Cart">Add To Cart</button> <br><br>
+                    <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
+                    <button class="add-to-cart-btn" onclick="addToCart('Grilled Asparagus')">Add to Cart</button>
                 </div>
                 <div class="menu-item">
                     <h3>Loaded Baked Potato</h3>
@@ -560,7 +578,8 @@
                         <input type="radio" id="star5" name="rating" value="4" />
                         <label for="star5" title="5 star"></label>
                     </div>
-                    <button id ="Add To Cart">Add To Cart</button> <br><br>
+                    <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
+                    <button class="add-to-cart-btn" onclick="addToCart('potato')">Add to Cart</button>
                 </div>
                 <div class="menu-item">
                     <h3>Garlic Bread</h3>
@@ -578,10 +597,37 @@
                         <input type="radio" id="star5" name="rating" value="4" />
                         <label for="star5" title="5 star"></label>
                     </div>
-                    <button id ="Add To Cart">Add To Cart</button> <br><br>
+                    <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
+                    <button class="add-to-cart-btn" onclick="addToCart('Garlic Bread')">Add to Cart</button>
                 </div>
             </div>
         </section>
+        <script>
+           document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const selectedItem = button.getAttribute('data-item');
+        addToCart(selectedItem);
+    });
+});
+
+function addToCart(item) {
+    let cartCount = sessionStorage.getItem('cartCount');
+    cartCount = cartCount ? parseInt(cartCount) : 0;
+    cartCount++;
+    sessionStorage.setItem('cartCount', cartCount);
+    updateCartButtonText(cartCount);
+}
+
+function updateCartButtonText(count) {
+    const cartBtn = document.getElementById('cartBtn');
+    cartBtn.textContent = `Cart (${count})`;
+}
+
+// Function to navigate to the add-to-cart page
+function goToCartPage() {
+    window.location.href = 'cart.html';
+}
+            </script>
         <footer>
             <div class="container">
              <p>&copy; 2024 Big Fin. All rights reserved.</p>
@@ -590,7 +636,7 @@
             <div class="web-links">
                 <a class="web-links web-link1" href="menu.html" target="_self"> DINING</a>
                 <a class="web-links web-link2" href="Aboutus.html" target="_self">ABOUT US</a>
-                <a class="web-links web-link3" href="contactus.html" target="_self">CONTACT US</a>
+                <a class="web-links web-link3" href="cart.html" target="_self">cart</a>
                 <a class="web-links web-link4" href="Blog.html" target="_self">BLOG</a>
                 <a class="web-links web-link4" href="careers.html" target="_self">CAREERS</a>
             </div>
