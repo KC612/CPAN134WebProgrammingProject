@@ -19,7 +19,7 @@
             background-repeat: no-repeat; 
                     }
         
-        .container {
+         .container {
             width: 80%;
             margin: 0 auto;
         }
@@ -69,7 +69,6 @@
         .menu-item h3 {
             margin-top: 0;
         }
-        
         .menu-item span {
             display: block;
             font-weight: bold;
@@ -82,30 +81,26 @@
             text-align: center;
             padding: 15px 0;
         }
+
+        .rating {
+        direction: ltr;
+        font-size: 36px;
+        }
+        .rating > span {
+        display: inline-block;
+        position: relative;
+        width: 36px;
+        }
+
         .rating input {
             display: none;
         }
 
         .rating {
             display: inline-block;
-            direction: rtl;
+            direction: ltr;
         }
 
-      
-        .rating label {
-            cursor: pointer;
-            width: 40px;
-            height: 40px;
-            background-image: url('/resources/empty star.jpg'); 
-            background-size: cover;
-            display: inline-block;
-        }
-
-        
-        .rating input:checked ~ label {
-            background-image: url('/resources/filled star.png');
-        }
-        
         nav div.cart-button-container {
             float: right;
         }
@@ -134,6 +129,8 @@
      
                 
         </style>
+
+    
     </head>
     <body>
     
@@ -162,21 +159,16 @@
             <section id="lunch-menu" class="menu-section">
             <div class="container">
                 <h2 style="color:white;">Lunch</h2>
-                <div class="menu-item">
+                <div class="menu-item" >
                     <h3>Fish Tacos</h3>
                     <p>Grilled fish tacos with avocado, coleslaw, and chipotle mayo.</p>
                     <span>$12.99</span><br>
                     <div class="rating">
-                        <input type="radio" id="star1" name="rating" value="1" />
-                        <label for="star1" title="1 stars"></label>
-                        <input type="radio" id="star2" name="rating" value="2" />
-                        <label for="star2" title="2 stars"></label>
-                        <input type="radio" id="star3" name="rating" value="3" />
-                        <label for="star3" title="3 stars"></label>
-                        <input type="radio" id="star4" name="rating" value="4" />
-                        <label for="star4" title="4 stars"></label>
-                        <input type="radio" id="star5" name="rating" value="4" />
-                        <label for="star5" title="5 star"></label>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
                     </div>
                     <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
                     <button class="add-to-cart-btn" onclick="addToCart('fishtaco')">Add To Cart</button>
@@ -186,16 +178,11 @@
                     <p>Fried shrimp sandwich with lettuce, tomato, and remoulade sauce.</p>
                     <span>$14.99</span><br>
                     <div class="rating">
-                        <input type="radio" id="star1" name="rating" value="1" />
-                        <label for="star1" title="1 stars"></label>
-                        <input type="radio" id="star2" name="rating" value="2" />
-                        <label for="star2" title="2 stars"></label>
-                        <input type="radio" id="star3" name="rating" value="3" />
-                        <label for="star3" title="3 stars"></label>
-                        <input type="radio" id="star4" name="rating" value="4" />
-                        <label for="star4" title="4 stars"></label>
-                        <input type="radio" id="star5" name="rating" value="4" />
-                        <label for="star5" title="5 star"></label>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
                     </div>
                     <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
                     <button class="add-to-cart-btn" onclick="addToCart('Shrimp Po')">Add To Cart</button>
@@ -205,16 +192,11 @@
                     <p>Romaine lettuce topped with grilled chicken, parmesan cheese, and Caesar dressing.</p>
                     <span>$10.99</span><br>
                     <div class="rating">
-                        <input type="radio" id="star1" name="rating" value="1" />
-                        <label for="star1" title="1 stars"></label>
-                        <input type="radio" id="star2" name="rating" value="2" />
-                        <label for="star2" title="2 stars"></label>
-                        <input type="radio" id="star3" name="rating" value="3" />
-                        <label for="star3" title="3 stars"></label>
-                        <input type="radio" id="star4" name="rating" value="4" />
-                        <label for="star4" title="4 stars"></label>
-                        <input type="radio" id="star5" name="rating" value="4" />
-                        <label for="star5" title="5 star"></label>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
                     </div>
                     <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
                     <button class="add-to-cart-btn" onclick="addToCart('salad')">Add to Cart</button>
@@ -224,16 +206,11 @@
                     <p>Grilled vegetables, hummus, and feta cheese wrapped in a tortilla.</p>
                     <span>$11.99</span><br>
                     <div class="rating">
-                        <input type="radio" id="star1" name="rating" value="1" />
-                        <label for="star1" title="1 stars"></label>
-                        <input type="radio" id="star2" name="rating" value="2" />
-                        <label for="star2" title="2 stars"></label>
-                        <input type="radio" id="star3" name="rating" value="3" />
-                        <label for="star3" title="3 stars"></label>
-                        <input type="radio" id="star4" name="rating" value="4" />
-                        <label for="star4" title="4 stars"></label>
-                        <input type="radio" id="star5" name="rating" value="4" />
-                        <label for="star5" title="5 star"></label>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
                     </div>
                     <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
                     <button class="add-to-cart-btn" onclick="addToCart('wrap')">Add to Cart</button>
@@ -243,16 +220,11 @@
                     <p>Grilled chicken breast served on a brioche bun with lettuce, tomato, and mayo.</p>
                     <span>$13.99</span><br>
                     <div class="rating">
-                        <input type="radio" id="star1" name="rating" value="1" />
-                        <label for="star1" title="1 stars"></label>
-                        <input type="radio" id="star2" name="rating" value="2" />
-                        <label for="star2" title="2 stars"></label>
-                        <input type="radio" id="star3" name="rating" value="3" />
-                        <label for="star3" title="3 stars"></label>
-                        <input type="radio" id="star4" name="rating" value="4" />
-                        <label for="star4" title="4 stars"></label>
-                        <input type="radio" id="star5" name="rating" value="4" />
-                        <label for="star5" title="5 star"></label>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
                     </div>
                     <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
                     <button class="add-to-cart-btn" onclick="addToCart('sandwich')">Add to Cart</button>
@@ -269,16 +241,11 @@
                     <p><sub>Grilled salmon served with roasted vegetables and lemon butter sauce.</sub></p>
                     <span>$18.99</span><br>
                     <div class="rating">
-                        <input type="radio" id="star1" name="rating" value="1" />
-                        <label for="star1" title="1 stars"></label>
-                        <input type="radio" id="star2" name="rating" value="2" />
-                        <label for="star2" title="2 stars"></label>
-                        <input type="radio" id="star3" name="rating" value="3" />
-                        <label for="star3" title="3 stars"></label>
-                        <input type="radio" id="star4" name="rating" value="4" />
-                        <label for="star4" title="4 stars"></label>
-                        <input type="radio" id="star5" name="rating" value="4" />
-                        <label for="star5" title="5 star"></label>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
                     </div>
                     <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
                     <button class="add-to-cart-btn" onclick="addToCart('salmon')">Add to Cart</button>
@@ -288,16 +255,11 @@
                     <p>Linguine pasta with lobster meat, garlic, and white wine sauce.</p>
                     <span>$24.99</span><br>
                     <div class="rating">
-                        <input type="radio" id="star1" name="rating" value="1" />
-                        <label for="star1" title="1 stars"></label>
-                        <input type="radio" id="star2" name="rating" value="2" />
-                        <label for="star2" title="2 stars"></label>
-                        <input type="radio" id="star3" name="rating" value="3" />
-                        <label for="star3" title="3 stars"></label>
-                        <input type="radio" id="star4" name="rating" value="4" />
-                        <label for="star4" title="4 stars"></label>
-                        <input type="radio" id="star5" name="rating" value="4" />
-                        <label for="star5" title="5 star"></label>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
                     </div>
                     <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
                     <button class="add-to-cart-btn" onclick="addToCart('Linguine')">Add to Cart</button>
@@ -307,16 +269,11 @@
                     <p>Traditional Spanish paella with shrimp, mussels, and chorizo.</p>
                     <span>$28.99</span><br>
                     <div class="rating">
-                        <input type="radio" id="star1" name="rating" value="1" />
-                        <label for="star1" title="1 stars"></label>
-                        <input type="radio" id="star2" name="rating" value="2" />
-                        <label for="star2" title="2 stars"></label>
-                        <input type="radio" id="star3" name="rating" value="3" />
-                        <label for="star3" title="3 stars"></label>
-                        <input type="radio" id="star4" name="rating" value="4" />
-                        <label for="star4" title="4 stars"></label>
-                        <input type="radio" id="star5" name="rating" value="4" />
-                        <label for="star5" title="5 star"></label>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
                     </div>
                     <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
                     <button class="add-to-cart-btn" onclick="addToCart('paella')">Add to Cart</button>
@@ -326,16 +283,11 @@
                     <p>Salmon cooked on a cedar plank, served with wild rice pilaf.</p>
                     <span>$22.99</span><br>
                     <div class="rating">
-                        <input type="radio" id="star1" name="rating" value="1" />
-                        <label for="star1" title="1 stars"></label>
-                        <input type="radio" id="star2" name="rating" value="2" />
-                        <label for="star2" title="2 stars"></label>
-                        <input type="radio" id="star3" name="rating" value="3" />
-                        <label for="star3" title="3 stars"></label>
-                        <input type="radio" id="star4" name="rating" value="4" />
-                        <label for="star4" title="4 stars"></label>
-                        <input type="radio" id="star5" name="rating" value="4" />
-                        <label for="star5" title="5 star"></label>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
                     </div>
                     <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
                     <button class="add-to-cart-btn" onclick="addToCart('cederSalmon')">Add to Cart</button>
@@ -345,16 +297,11 @@
                     <p>House-made crab cakes served with remoulade sauce.</p>
                     <span>$22.99</span><br>
                     <div class="rating">
-                        <input type="radio" id="star1" name="rating" value="1" />
-                        <label for="star1" title="1 stars"></label>
-                        <input type="radio" id="star2" name="rating" value="2" />
-                        <label for="star2" title="2 stars"></label>
-                        <input type="radio" id="star3" name="rating" value="3" />
-                        <label for="star3" title="3 stars"></label>
-                        <input type="radio" id="star4" name="rating" value="4" />
-                        <label for="star4" title="4 stars"></label>
-                        <input type="radio" id="star5" name="rating" value="4" />
-                        <label for="star5" title="5 star"></label>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
                     </div>
                     <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
                     <button class="add-to-cart-btn" onclick="addToCart('crab-cake')">Add to Cart</button>
@@ -364,16 +311,11 @@
                     <p>Fettuccine pasta with crab meat and Alfredo sauce.</p>
                     <span>$26.99</span><br>
                     <div class="rating">
-                        <input type="radio" id="star1" name="rating" value="1" />
-                        <label for="star1" title="1 stars"></label>
-                        <input type="radio" id="star2" name="rating" value="2" />
-                        <label for="star2" title="2 stars"></label>
-                        <input type="radio" id="star3" name="rating" value="3" />
-                        <label for="star3" title="3 stars"></label>
-                        <input type="radio" id="star4" name="rating" value="4" />
-                        <label for="star4" title="4 stars"></label>
-                        <input type="radio" id="star5" name="rating" value="4" />
-                        <label for="star5" title="5 star"></label>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
                     </div>
                     <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
                     <button class="add-to-cart-btn" onclick="addToCart('alfredo')">Add to Cart</button>
@@ -389,16 +331,11 @@
                     <p>Vodka, cranberry juice, and grapefruit juice.</p>
                     <span>$8.99</span><br>
                     <div class="rating">
-                        <input type="radio" id="star1" name="rating" value="1" />
-                        <label for="star1" title="1 stars"></label>
-                        <input type="radio" id="star2" name="rating" value="2" />
-                        <label for="star2" title="2 stars"></label>
-                        <input type="radio" id="star3" name="rating" value="3" />
-                        <label for="star3" title="3 stars"></label>
-                        <input type="radio" id="star4" name="rating" value="4" />
-                        <label for="star4" title="4 stars"></label>
-                        <input type="radio" id="star5" name="rating" value="4" />
-                        <label for="star5" title="5 star"></label>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
                     </div>
                     <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
                     <button class="add-to-cart-btn" onclick="addToCart('sea-breeze')">Add to Cart</button>
@@ -408,16 +345,11 @@
                     <p>White rum, fresh mint, lime, sugar, and soda water.</p>
                     <span>$9.99</span><br>
                     <div class="rating">
-                        <input type="radio" id="star1" name="rating" value="1" />
-                        <label for="star1" title="1 stars"></label>
-                        <input type="radio" id="star2" name="rating" value="2" />
-                        <label for="star2" title="2 stars"></label>
-                        <input type="radio" id="star3" name="rating" value="3" />
-                        <label for="star3" title="3 stars"></label>
-                        <input type="radio" id="star4" name="rating" value="4" />
-                        <label for="star4" title="4 stars"></label>
-                        <input type="radio" id="star5" name="rating" value="4" />
-                        <label for="star5" title="5 star"></label>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
                     </div>
                     <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
                     <button class="add-to-cart-btn" onclick="addToCart('Mojito')">Add to Cart</button>
@@ -427,16 +359,11 @@
                     <p>Bourbon, sugar, bitters, and an orange twist.</p>
                     <span>$10.99</span><br>
                     <div class="rating">
-                        <input type="radio" id="star1" name="rating" value="1" />
-                        <label for="star1" title="1 stars"></label>
-                        <input type="radio" id="star2" name="rating" value="2" />
-                        <label for="star2" title="2 stars"></label>
-                        <input type="radio" id="star3" name="rating" value="3" />
-                        <label for="star3" title="3 stars"></label>
-                        <input type="radio" id="star4" name="rating" value="4" />
-                        <label for="star4" title="4 stars"></label>
-                        <input type="radio" id="star5" name="rating" value="4" />
-                        <label for="star5" title="5 star"></label>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
                     </div>
                     <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
                     <button class="add-to-cart-btn" onclick="addToCart('Old Fashioned')">Add to Cart</button>
@@ -446,16 +373,11 @@
                     <p>Rum, coconut cream, pineapple juice, and crushed ice.</p>
                     <span>$9.99</span><br>
                     <div class="rating">
-                        <input type="radio" id="star1" name="rating" value="1" />
-                        <label for="star1" title="1 stars"></label>
-                        <input type="radio" id="star2" name="rating" value="2" />
-                        <label for="star2" title="2 stars"></label>
-                        <input type="radio" id="star3" name="rating" value="3" />
-                        <label for="star3" title="3 stars"></label>
-                        <input type="radio" id="star4" name="rating" value="4" />
-                        <label for="star4" title="4 stars"></label>
-                        <input type="radio" id="star5" name="rating" value="4" />
-                        <label for="star5" title="5 star"></label>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
                     </div>
                     <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
                     <button class="add-to-cart-btn" onclick="addToCart('Pina Colada')">Add to Cart</button>
@@ -465,16 +387,11 @@
                     <p>Tequila, lime juice, and triple sec, served with salt on the rim.</p>
                     <span>$10.99</span><br>
                     <div class="rating">
-                        <input type="radio" id="star1" name="rating" value="1" />
-                        <label for="star1" title="1 stars"></label>
-                        <input type="radio" id="star2" name="rating" value="2" />
-                        <label for="star2" title="2 stars"></label>
-                        <input type="radio" id="star3" name="rating" value="3" />
-                        <label for="star3" title="3 stars"></label>
-                        <input type="radio" id="star4" name="rating" value="4" />
-                        <label for="star4" title="4 stars"></label>
-                        <input type="radio" id="star5" name="rating" value="4" />
-                        <label for="star5" title="5 star"></label>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
                     </div>
                     <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
                     <button class="add-to-cart-btn" onclick="addToCart('Margarita')">Add to Cart</button>
@@ -484,16 +401,11 @@
                     <p>Bourbon, lemon juice, and simple syrup, garnished with a cherry and orange slice.</p>
                     <span>$11.99</span><br>
                     <div class="rating">
-                        <input type="radio" id="star1" name="rating" value="1" />
-                        <label for="star1" title="1 stars"></label>
-                        <input type="radio" id="star2" name="rating" value="2" />
-                        <label for="star2" title="2 stars"></label>
-                        <input type="radio" id="star3" name="rating" value="3" />
-                        <label for="star3" title="3 stars"></label>
-                        <input type="radio" id="star4" name="rating" value="4" />
-                        <label for="star4" title="4 stars"></label>
-                        <input type="radio" id="star5" name="rating" value="4" />
-                        <label for="star5" title="5 star"></label>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
                     </div>
                     <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
                     <button class="add-to-cart-btn" onclick="addToCart('Whiskey Sour')">Add to Cart</button>
@@ -510,16 +422,11 @@
                     <p>French fries tossed in garlic butter and parmesan cheese.</p>
                     <span>$6.99</span><br>
                     <div class="rating">
-                        <input type="radio" id="star1" name="rating" value="1" />
-                        <label for="star1" title="1 stars"></label>
-                        <input type="radio" id="star2" name="rating" value="2" />
-                        <label for="star2" title="2 stars"></label>
-                        <input type="radio" id="star3" name="rating" value="3" />
-                        <label for="star3" title="3 stars"></label>
-                        <input type="radio" id="star4" name="rating" value="4" />
-                        <label for="star4" title="4 stars"></label>
-                        <input type="radio" id="star5" name="rating" value="4" />
-                        <label for="star5" title="5 star"></label>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
                     </div>
                     <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
                     <button class="add-to-cart-btn" onclick="addToCart('fries')">Add to Cart</button>
@@ -529,16 +436,11 @@
                     <p>Macaroni pasta in a creamy truffle-infused cheese sauce.</p>
                     <span>$8.99</span><br>
                     <div class="rating">
-                        <input type="radio" id="star1" name="rating" value="1" />
-                        <label for="star1" title="1 stars"></label>
-                        <input type="radio" id="star2" name="rating" value="2" />
-                        <label for="star2" title="2 stars"></label>
-                        <input type="radio" id="star3" name="rating" value="3" />
-                        <label for="star3" title="3 stars"></label>
-                        <input type="radio" id="star4" name="rating" value="4" />
-                        <label for="star4" title="4 stars"></label>
-                        <input type="radio" id="star5" name="rating" value="4" />
-                        <label for="star5" title="5 star"></label>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
                     </div>
                     <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
                     <button class="add-to-cart-btn" onclick="addToCart('Mac and cheese')">Add to Cart</button>
@@ -548,16 +450,11 @@
                     <p>Fresh asparagus spears grilled with olive oil and sea salt.</p>
                     <span>$7.99</span><br>
                     <div class="rating">
-                        <input type="radio" id="star1" name="rating" value="1" />
-                        <label for="star1" title="1 stars"></label>
-                        <input type="radio" id="star2" name="rating" value="2" />
-                        <label for="star2" title="2 stars"></label>
-                        <input type="radio" id="star3" name="rating" value="3" />
-                        <label for="star3" title="3 stars"></label>
-                        <input type="radio" id="star4" name="rating" value="4" />
-                        <label for="star4" title="4 stars"></label>
-                        <input type="radio" id="star5" name="rating" value="4" />
-                        <label for="star5" title="5 star"></label>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
                     </div>
                     <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
                     <button class="add-to-cart-btn" onclick="addToCart('Grilled Asparagus')">Add to Cart</button>
@@ -567,16 +464,11 @@
                     <p>A baked potato topped with cheese, bacon, sour cream, and chives.</p>
                     <span>$7.99</span><br>
                     <div class="rating">
-                        <input type="radio" id="star1" name="rating" value="1" />
-                        <label for="star1" title="1 stars"></label>
-                        <input type="radio" id="star2" name="rating" value="2" />
-                        <label for="star2" title="2 stars"></label>
-                        <input type="radio" id="star3" name="rating" value="3" />
-                        <label for="star3" title="3 stars"></label>
-                        <input type="radio" id="star4" name="rating" value="4" />
-                        <label for="star4" title="4 stars"></label>
-                        <input type="radio" id="star5" name="rating" value="4" />
-                        <label for="star5" title="5 star"></label>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
                     </div>
                     <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
                     <button class="add-to-cart-btn" onclick="addToCart('potato')">Add to Cart</button>
@@ -586,16 +478,11 @@
                     <p>Buttery garlic breadsticks served with marinara sauce.</p>
                     <span>$5.99</span><br>
                     <div class="rating">
-                        <input type="radio" id="star1" name="rating" value="1" />
-                        <label for="star1" title="1 stars"></label>
-                        <input type="radio" id="star2" name="rating" value="2" />
-                        <label for="star2" title="2 stars"></label>
-                        <input type="radio" id="star3" name="rating" value="3" />
-                        <label for="star3" title="3 stars"></label>
-                        <input type="radio" id="star4" name="rating" value="4" />
-                        <label for="star4" title="4 stars"></label>
-                        <input type="radio" id="star5" name="rating" value="4" />
-                        <label for="star5" title="5 star"></label>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
+                        <span>&#x2606;</span>
                     </div>
                     <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
                     <button class="add-to-cart-btn" onclick="addToCart('Garlic Bread')">Add to Cart</button>
@@ -641,6 +528,29 @@ function goToCartPage() {
                 <a class="web-links web-link4" href="careers.html" target="_self">CAREERS</a>
             </div>
         </footer>
+        <script>
+            const menuItems = document.querySelectorAll('.menu-item');
+    
+            menuItems.forEach(menuItem => {
+                const stars = menuItem.querySelectorAll('.rating > span');
+    
+                stars.forEach((star, index) => {
+                    star.addEventListener('click', () => {
+                        resetStars(menuItem);
+                        for (let i = 0; i <= index; i++) {
+                            stars[i].innerHTML = '&#x2605;';
+                        }
+                    });
+                });
+            });
+    
+            function resetStars(menuItem) {
+                const stars = menuItem.querySelectorAll('.rating > span');
+                stars.forEach(star => {
+                    star.innerHTML = '&#x2606;';
+                });
+            }</script>
     
         </body>
 </html>
+
