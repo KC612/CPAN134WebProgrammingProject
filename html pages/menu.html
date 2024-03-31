@@ -171,6 +171,7 @@
                                 <span>&#x2606;</span>
                             </div>
                             <button class="add-to-cart-btn" onclick="addToCart('Fish Tacos', 12.99)">Add To Cart</button>
+                            <button class="remove-from-cart-btn" onclick="removeFromCart('Fish Tacos')">Remove One</button>
                         </div>
                 <div class="menu-item">
                     <h3>Shrimp Po' Boy</h3>
@@ -497,6 +498,29 @@
                 if (itemName && itemPrice) {
                     cartCount++;
                     sessionStorage.setItem(`item${cartCount}`, JSON.stringify({ name: itemName, price: itemPrice, amount: 1 }));
+                }
+        
+                sessionStorage.setItem('cartCount', cartCount);
+                updateCartButtonText(cartCount);
+            }
+        
+            function removeFromCart(itemName) {
+                let cartCount = sessionStorage.getItem('cartCount');
+                cartCount = cartCount ? parseInt(cartCount) : 0;
+        
+                // Decrement cart count by one only if the item exists in the cart
+                if (cartCount > 0) {
+                    for (let i = cartCount; i > 0; i--) {
+                        const itemString = sessionStorage.getItem(`item${i}`);
+                        if (itemString) {
+                            const item = JSON.parse(itemString);
+                            if (item.name === itemName) {
+                                sessionStorage.removeItem(`item${i}`);
+                                cartCount--;
+                                break; // Exit loop once one item is removed
+                            }
+                        }
+                    }
                 }
         
                 sessionStorage.setItem('cartCount', cartCount);
