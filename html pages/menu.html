@@ -490,30 +490,35 @@
             </div>
         </section>
         <script>
-           document.querySelectorAll('.add-to-cart-btn').forEach(button => {
-    button.addEventListener('click', () => {
-        const selectedItem = button.getAttribute('data-item');
-        addToCart(selectedItem);
+        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const selectedItem = button.getAttribute('data-item');
+            addToCart(selectedItem);
+        });
     });
-});
 
-function addToCart(item) {
-    let cartCount = sessionStorage.getItem('cartCount');
-    cartCount = cartCount ? parseInt(cartCount) : 0;
+    function addToCart(item) {
+        let cartCount = sessionStorage.getItem('cartCount');
+        cartCount = cartCount ? parseInt(cartCount) : 0;
+        // Increment cart count by one only if the item is added to cart
+        if (item) {
     cartCount++;
-    sessionStorage.setItem('cartCount', cartCount);
-    updateCartButtonText(cartCount);
+    // Store the selected item in sessionStorage
+    sessionStorage.setItem(`item${cartCount}`, item);
 }
+        sessionStorage.setItem('cartCount', cartCount);
+        updateCartButtonText(cartCount);
+    }
 
-function updateCartButtonText(count) {
-    const cartBtn = document.getElementById('cartBtn');
-    cartBtn.textContent = `Cart (${count})`;
-}
+    function updateCartButtonText(count) {
+        const cartBtn = document.getElementById('cartBtn');
+        cartBtn.textContent = `Cart (${count})`;
+    }
 
-// Function to navigate to the add-to-cart page
-function goToCartPage() {
-    window.location.href = 'cart.html';
-}
+    // Function to navigate to the add-to-cart page
+    function goToCartPage() {
+        window.location.href = 'cart.html';
+    }
             </script>
         <footer>
             <div class="container">

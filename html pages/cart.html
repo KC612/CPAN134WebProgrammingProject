@@ -231,17 +231,27 @@ float: left;
     <a class="web-links web-link5" href="Careers.html">CAREERS</a>
   </div>
   <h1>This Page is under construction & will be converted into an "add to cart" page to take <strong>your</strong> orders!</h1>
+  <!-- Other HTML content -->
+
+    <!-- This is where the selected items will be displayed -->
+    <div id="cart-items"></div>
+
+    <!-- Other HTML content -->
   <script>
-    // Retrieve the selected item from session storage
-    var selectedItem = sessionStorage.getItem('selectedItem');
-    
-    // Display the selected item on the page
+    // Retrieve the number of items from session storage
+let cartCount = sessionStorage.getItem('cartCount');
+cartCount = cartCount ? parseInt(cartCount) : 0;
+
+// Display the selected items on the page
+const cartItemsDiv = document.getElementById('cart-items');
+for (let i = 1; i <= cartCount; i++) {
+    const selectedItem = sessionStorage.getItem(`item${i}`);
     if (selectedItem) {
-        var cartItemsDiv = document.getElementById('cart-items');
-        var itemParagraph = document.createElement('p');
+        const itemParagraph = document.createElement('p');
         itemParagraph.textContent = selectedItem;
         cartItemsDiv.appendChild(itemParagraph);
     }
+}
 </script>
 </body>
 </html>
