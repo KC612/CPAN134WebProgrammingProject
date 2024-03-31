@@ -230,7 +230,7 @@ float: left;
     <a class="web-links web-link4" href="Blog.html">BLOG</a>
     <a class="web-links web-link5" href="Careers.html">CAREERS</a>
   </div>
-  <h1>Cart</h1>
+  <h1 id="myHeader">Your Cart</h1>
 
 <!-- This is where the selected items will be displayed -->
 <div id="cart-items"></div>
@@ -288,6 +288,19 @@ float: left;
     const totalAmountSpan = document.getElementById('totalAmount');
     totalAmountSpan.textContent = totalAmount.toFixed(2);
 </script>
+<button id="checkoutBtn" class="gradient-button">Check Out</button>
 
+<!-- Your existing HTML and JavaScript code -->
+
+<script>
+    // Get a reference to the "Check Out" button
+    const checkoutButton = document.getElementById('checkoutBtn');
+
+    // Add an event listener to the button
+    checkoutButton.addEventListener('click', function() {
+        // Redirect to the checkout page
+        window.location.href = 'checkout.html';
+    });
+</script>
 </body>
 </html>

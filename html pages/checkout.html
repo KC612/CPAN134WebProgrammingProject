@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css stylesheet/aboutus.css">
+    <style>
+    #myHeader {
+  background-color: rgb(255, 255, 255);
+  color: navy;
+  padding: 40px;
+  text-align: center;
+  text-decoration: underline;
+  border-style: double;
+  border-color: red;
+  border-width: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+    .web-links-one {
+        display:flex;
+        flex-wrap: wrap;
+          justify-content: center; /* Align items horizontally in the center */
+          align-items: center; /* Align items vertically in the center */
+          width: 100%;
+          padding: 0;
+      }
+      .web-links-one a {
+                  text-decoration: none;
+                  color: navy;
+                  padding: 10px;
+                  margin: 5px;
+                  border: 2px solid navy;
+                  border-radius: 5px;
+                  transition: background-color 0.3s, color 0.3s;
+                  flex: 1 0 auto;
+                  max-width:150px;
+                  text-align: center;
+              }
+              .web-links-one a:hover {
+                  background-color: navy;
+                  color: white;
+              }
+              #countdown {
+    font-size: 24px;
+  }
+        /* Media query for smaller devices */
+        @media only screen and (max-width: 768px) {
+        /* For mobile phones: */
+        [class*="col-"] {
+          width: 100%;
+        }
+        [class*="web-links-one"] {
+          width: 100%;
+        }
+      
+        [class*="funfact"] {
+          width: 100%;
+        }
+        .myHeader {
+          width: 100%;
+        }
+        .web-links-one a {
+          width: 100%;
+          max-width: none;
+        }
+        }
+      </style>
+</head>
+<body>
+    <div class="web-links-one">
+        <a class="web-links web-link0" href="Homepage.html"> HOME</a>
+        <a class="web-links web-link1" href="menu.html"> DINING</a>
+        <a class="web-links web-link2" href="Aboutus.html">ABOUT US</a>
+        <a class="web-links web-link3" href="cart.html">CART</a>
+        <a class="web-links web-link4" href="Blog.html">BLOG</a>
+        <a class="web-links web-link5" href="Careers.html">CAREERS</a>
+      </div>
+    <center>
+    <h1 id="myHeader">Order</h1>
+    <h1>Thank you for ordering with BigFin <small>&copy</small></h1>
+    <h1>Your meal will be ready in approximately:</h1><div id="countdown">20:00</div>
+    </center>
+    <script>
+    // Set the target time 20 minutes from now
+    const targetTime = new Date();
+    targetTime.setMinutes(targetTime.getMinutes() + 20);
+    
+    // Update the countdown every second
+    const countdownElement = document.getElementById('countdown');
+    const timerInterval = setInterval(updateCountdown, 1000);
+    
+    function updateCountdown() {
+      const currentTime = new Date();
+      const difference = targetTime - currentTime;
+    
+      if (difference <= 0) {
+        clearInterval(timerInterval);
+        countdownElement.innerHTML = 'Time\'s up!';
+      } else {
+        const minutes = Math.floor((difference / (1000 * 60)) % 60);
+        const seconds = Math.floor((difference / 1000) % 60);
+    
+        countdownElement.innerHTML = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+      }
+    }
+    </script>
+</body>
