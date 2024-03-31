@@ -489,38 +489,31 @@
             </div>
         </section>
         <script>
-        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
-            button.addEventListener('click', () => {
-                const itemName = button.parentNode.querySelector('h3').textContent;
-                const itemPrice = parseFloat(button.parentNode.querySelector('span').textContent.slice(1)); // Extract price without '$'
-                addToCart(itemName, itemPrice);
-            });
-        });
-    
-        function addToCart(itemName, itemPrice) {
-            let cartCount = sessionStorage.getItem('cartCount');
-            cartCount = cartCount ? parseInt(cartCount) : 0;
-    
-            // Increment cart count by one only if the item is added to cart
-            if (itemName && itemPrice) {
-                cartCount++;
-                sessionStorage.setItem(`item${cartCount}`, JSON.stringify({name: itemName, price: itemPrice, amount: 1}));
+            function addToCart(itemName, itemPrice) {
+                let cartCount = sessionStorage.getItem('cartCount');
+                cartCount = cartCount ? parseInt(cartCount) : 0;
+        
+                // Increment cart count by one only if the item is added to cart
+                if (itemName && itemPrice) {
+                    cartCount++;
+                    sessionStorage.setItem(`item${cartCount}`, JSON.stringify({ name: itemName, price: itemPrice, amount: 1 }));
+                }
+        
+                sessionStorage.setItem('cartCount', cartCount);
+                updateCartButtonText(cartCount);
             }
-    
-            sessionStorage.setItem('cartCount', cartCount);
-            updateCartButtonText(cartCount);
-        }
-    
-        function updateCartButtonText(count) {
-            const cartBtn = document.getElementById('cartBtn');
-            cartBtn.textContent = `Cart (${count})`;
-        }
-    
-        // Function to navigate to the cart page
-        function goToCartPage() {
-            window.location.href = 'cart.html';
-        }
-    </script>
+        
+            function updateCartButtonText(count) {
+                const cartBtn = document.getElementById('cartBtn');
+                cartBtn.textContent = `Cart (${count})`;
+            }
+        
+            // Function to navigate to the cart page
+            function goToCartPage() {
+                window.location.href = 'cart.html';
+            }
+        </script>
+        
         <footer>
             <div class="container">
              <p>&copy; 2024 Big Fin. All rights reserved.</p>
