@@ -156,23 +156,22 @@
          
                 
                 </div>
-            <section id="lunch-menu" class="menu-section">
-            <div class="container">
-                <h2 style="color:white;">Lunch</h2>
-                <div class="menu-item" >
-                    <h3>Fish Tacos</h3>
-                    <p>Grilled fish tacos with avocado, coleslaw, and chipotle mayo.</p>
-                    <span>$12.99</span><br>
-                    <div class="rating">
-                        <span>&#x2606;</span>
-                        <span>&#x2606;</span>
-                        <span>&#x2606;</span>
-                        <span>&#x2606;</span>
-                        <span>&#x2606;</span>
-                    </div>
-                    <!--<button id ="Add To Cart">Add To Cart</button> <br><br>-->
-                    <button class="add-to-cart-btn" onclick="addToCart('fishtaco')">Add To Cart</button>
-                </div>
+                <section id="lunch-menu" class="menu-section">
+                    <div class="container">
+                        <h2 style="color:white;">Lunch</h2>
+                        <div class="menu-item">
+                            <h3>Fish Tacos</h3>
+                            <p>Grilled fish tacos with avocado, coleslaw, and chipotle mayo.</p>
+                            <span>$12.99</span><br>
+                            <div class="rating">
+                                <span>&#x2606;</span>
+                                <span>&#x2606;</span>
+                                <span>&#x2606;</span>
+                                <span>&#x2606;</span>
+                                <span>&#x2606;</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="addToCart('Fish Tacos', 12.99)">Add To Cart</button>
+                        </div>
                 <div class="menu-item">
                     <h3>Shrimp Po' Boy</h3>
                     <p>Fried shrimp sandwich with lettuce, tomato, and remoulade sauce.</p>
@@ -491,35 +490,37 @@
         </section>
         <script>
         document.querySelectorAll('.add-to-cart-btn').forEach(button => {
-        button.addEventListener('click', () => {
-            const selectedItem = button.getAttribute('data-item');
-            addToCart(selectedItem);
+            button.addEventListener('click', () => {
+                const itemName = button.parentNode.querySelector('h3').textContent;
+                const itemPrice = parseFloat(button.parentNode.querySelector('span').textContent.slice(1)); // Extract price without '$'
+                addToCart(itemName, itemPrice);
+            });
         });
-    });
-
-    function addToCart(item) {
-        let cartCount = sessionStorage.getItem('cartCount');
-        cartCount = cartCount ? parseInt(cartCount) : 0;
-        // Increment cart count by one only if the item is added to cart
-        if (item) {
-    cartCount++;
-    // Store the selected item in sessionStorage
-    sessionStorage.setItem(`item${cartCount}`, item);
-}
-        sessionStorage.setItem('cartCount', cartCount);
-        updateCartButtonText(cartCount);
-    }
-
-    function updateCartButtonText(count) {
-        const cartBtn = document.getElementById('cartBtn');
-        cartBtn.textContent = `Cart (${count})`;
-    }
-
-    // Function to navigate to the add-to-cart page
-    function goToCartPage() {
-        window.location.href = 'cart.html';
-    }
-            </script>
+    
+        function addToCart(itemName, itemPrice) {
+            let cartCount = sessionStorage.getItem('cartCount');
+            cartCount = cartCount ? parseInt(cartCount) : 0;
+    
+            // Increment cart count by one only if the item is added to cart
+            if (itemName && itemPrice) {
+                cartCount++;
+                sessionStorage.setItem(`item${cartCount}`, JSON.stringify({name: itemName, price: itemPrice, amount: 1}));
+            }
+    
+            sessionStorage.setItem('cartCount', cartCount);
+            updateCartButtonText(cartCount);
+        }
+    
+        function updateCartButtonText(count) {
+            const cartBtn = document.getElementById('cartBtn');
+            cartBtn.textContent = `Cart (${count})`;
+        }
+    
+        // Function to navigate to the cart page
+        function goToCartPage() {
+            window.location.href = 'cart.html';
+        }
+    </script>
         <footer>
             <div class="container">
              <p>&copy; 2024 Big Fin. All rights reserved.</p>
