@@ -197,6 +197,14 @@ float: left;
             background-color: navy;
             color: white;
         }
+
+        .container {
+  background-color: white; /* White background */
+  padding: 20px; /* Add padding for separation */
+  margin: 0 auto; /* Center the container horizontally */
+  max-width: 800px; /* Set maximum width for the container */
+  border: 2px solid black;
+}
   /* Media query for smaller devices */
   @media only screen and (max-width: 768px) {
   /* For mobile phones: */
@@ -231,15 +239,14 @@ float: left;
     <a class="web-links web-link5" href="Careers.html">CAREERS</a>
   </div>
   <h1 id="myHeader">Your Cart</h1>
-
-<!-- This is where the selected items will be displayed -->
+<div class="container">
+<!-- shows menu items clicked -->
 <div id="cart-items"></div>
 
 <!-- Total amount -->
 <p>Total: $<span id="totalAmount">0.00</span></p>
-
-<!-- Other HTML content -->
-
+<center><button id="checkoutBtn" class="gradient-button">Check Out</button></center>
+</div>
 <script>
     // Retrieve the number of items from session storage
     let cartCount = sessionStorage.getItem('cartCount');
@@ -288,7 +295,7 @@ float: left;
     const totalAmountSpan = document.getElementById('totalAmount');
     totalAmountSpan.textContent = totalAmount.toFixed(2);
 </script>
-<button id="checkoutBtn" class="gradient-button">Check Out</button>
+
 <script>
   // Function to remove one item from the cart
   function removeFromCart(itemName) {
@@ -326,7 +333,7 @@ float: left;
       location.reload();
   }
 </script>
-<!-- Your existing HTML and JavaScript code -->
+
 
 <script>
     // Get a reference to the "Check Out" button
