@@ -248,102 +248,60 @@ float: left;
 <center><button id="checkoutBtn" class="gradient-button">Check Out</button></center>
 </div>
 <script>
-    // Retrieve the number of items from session storage
-    let cartCount = sessionStorage.getItem('cartCount');
-    cartCount = cartCount ? parseInt(cartCount) : 0;
+  // Retrieve the number of items from local storage
+  let cartCount = localStorage.getItem('cartCount');
+  cartCount = cartCount ? parseInt(cartCount) : 0;
 
-    // Initialize total amount
-    let totalAmount = 0;
+  // Initialize total amount
+  let totalAmount = 0;
 
-    // Object to store aggregated items
-    const aggregatedItems = {};
+  // Object to store aggregated items
+  const aggregatedItems = {};
 
-    // Aggregate items
-    for (let i = 1; i <= cartCount; i++) {
-        const itemString = sessionStorage.getItem(`item${i}`);
-        if (itemString) {
-            const item = JSON.parse(itemString);
-            const itemName = item.name;
-            const itemPrice = item.price;
-            const itemAmount = item.amount;
+  // Aggregate items
+  for (let i = 1; i <= cartCount; i++) {
+      const itemString = localStorage.getItem(`item${i}`);
+      if (itemString) {
+          const item = JSON.parse(itemString);
+          const itemName = item.name;
+          const itemPrice = item.price;
+          const itemAmount = item.amount;
 
-            // Update total amount
-            totalAmount += itemPrice * itemAmount;
+          // Update total amount
+          totalAmount += itemPrice * itemAmount;
 
-            // Aggregate items by name
-            if (aggregatedItems[itemName]) {
-                aggregatedItems[itemName].amount += itemAmount;
-            } else {
-                aggregatedItems[itemName] = {
-                    price: itemPrice,
-                    amount: itemAmount
-                };
-            }
-        }
-    }
-
-    // Display aggregated items
-    const cartItemsDiv = document.getElementById('cart-items');
-    for (const itemName in aggregatedItems) {
-        const item = aggregatedItems[itemName];
-        const itemParagraph = document.createElement('p');
-        itemParagraph.textContent = `Name: ${itemName}, Price: $${item.price.toFixed(2)}, Amount: ${item.amount}`;
-        cartItemsDiv.appendChild(itemParagraph);
-    }
-
-    // Update total amount on the page
-    const totalAmountSpan = document.getElementById('totalAmount');
-    totalAmountSpan.textContent = totalAmount.toFixed(2);
-</script>
-
-<script>
-  // Function to remove one item from the cart
-  function removeFromCart(itemName) {
-      let cartCount = sessionStorage.getItem('cartCount');
-      cartCount = cartCount ? parseInt(cartCount) : 0;
-
-      // Loop through items in the cart and find the specified item
-      for (let i = 1; i <= cartCount; i++) {
-          const itemString = sessionStorage.getItem(`item${i}`);
-          if (itemString) {
-              const item = JSON.parse(itemString);
-              if (item.name === itemName) {
-                  // If the item quantity is more than 1, decrease the quantity
-                  if (item.amount > 1) {
-                      item.amount--;
-                      sessionStorage.setItem(`item${i}`, JSON.stringify(item));
-                  } else {
-                      // If the item quantity is 1, remove the item from the cart
-                      sessionStorage.removeItem(`item${i}`);
-                      // Shift other items to fill the gap
-                      for (let j = i + 1; j <= cartCount; j++) {
-                          const nextItemString = sessionStorage.getItem(`item${j}`);
-                          sessionStorage.setItem(`item${j - 1}`, nextItemString);
-                          sessionStorage.removeItem(`item${j}`);
-                      }
-                      cartCount--;
-                      sessionStorage.setItem('cartCount', cartCount);
-                  }
-                  break;
-              }
+          // Aggregate items by name
+          if (aggregatedItems[itemName]) {
+              aggregatedItems[itemName].amount += itemAmount;
+          } else {
+              aggregatedItems[itemName] = {
+                  price: itemPrice,
+                  amount: itemAmount
+              };
           }
       }
-
-      // Reload the page to reflect the updated cart
-      location.reload();
   }
+
+  // Display aggregated items
+  const cartItemsDiv = document.getElementById('cart-items');
+  for (const itemName in aggregatedItems) {
+      const item = aggregatedItems[itemName];
+      const itemParagraph = document.createElement('p');
+      itemParagraph.textContent = `Name: ${itemName}, Price: $${item.price.toFixed(2)}, Amount: ${item.amount}`;
+      cartItemsDiv.appendChild(itemParagraph);
+  }
+
+  // Update total amount on the page
+  const totalAmountSpan = document.getElementById('totalAmount');
+  totalAmountSpan.textContent = totalAmount.toFixed(2);
 </script>
-
-
 <script>
-    // Get a reference to the "Check Out" button
-    const checkoutButton = document.getElementById('checkoutBtn');
-
-    // Add an event listener to the button
-    checkoutButton.addEventListener('click', function() {
-        // Redirect to the checkout page
-        window.location.href = 'checkout.html';
-    });
+  const checkoutButton = document.getElementById('checkoutBtn');
+  // event listener for the button
+  checkoutButton.addEventListener('click', function() {
+      // Redirect to the checkout page
+      window.location.href = 'checkout.html';
+  });
 </script>
 </body>
 </html>
