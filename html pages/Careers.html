@@ -183,7 +183,7 @@
             <section id ="submit_resume">
               <div class="container">
                 <h2 style="color: #631d1d""  >Submit Your Resume</h2>
-                <form action="submit_resume.php" method="POST" enctype="multipart/form-data">
+                <form id="resumeForm" action="apply.html" method="GET" onsubmit="return validateForm()">
                   <div class="form-group">
                     <label for="name">Full Name:</label>
                     <input type="text" id="name" name="name" required>
@@ -206,11 +206,24 @@
                     <label for="resume">Upload Resume:</label>
                     <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
                   </div>
-                  <input type="submit" value="Submit Resume" onclick="window.location.href='apply.html'">
+                  <input type="submit" value="Submit Resume" onclick="validateForm()">
+
                 </form>
               </div>
             </section>
-
+            <script>
+              function validateForm() {
+                var name = document.getElementById("name").value;
+                var email = document.getElementById("email").value;
+                var role = document.getElementById("role").value;
+                var resume = document.getElementById("resume").value;
+            
+                if (name.trim() === "" || email.trim() === "" || role === "" || resume.trim() === "") {
+                  alert("Please fill in all required fields.");
+                  return false;
+                }
+              }
+            </script>
             <footer>
               
                <p>&copy; 2024 Big Fin. All rights reserved.</p>
