@@ -505,6 +505,17 @@
                 </div>         
             </div>
         </section>
+        <script>
+            // Function to initialize and update cart count on page load
+            window.onload = function() {
+                // Retrieve the cart count from local storage
+                let cartCount = localStorage.getItem('cartCount');
+                cartCount = cartCount ? parseInt(cartCount) : 0;
+                
+                // Update cart button text
+                updateCartButtonText(cartCount);
+            };
+        </script>
 <script>
     function addToCart(itemName, itemPrice) {
         let cartCount = localStorage.getItem('cartCount');
