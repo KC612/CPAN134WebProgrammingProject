@@ -248,8 +248,8 @@ float: left;
 <center><button id="checkoutBtn" class="gradient-button">Check Out</button></center>
 </div>
 <script>
-  // Retrieve the number of items from local storage
-  let cartCount = localStorage.getItem('cartCount');
+  // Retrieve the number of items from session storage
+  let cartCount = sessionStorage.getItem('cartCount');
   cartCount = cartCount ? parseInt(cartCount) : 0;
 
   // Initialize total amount
@@ -260,7 +260,7 @@ float: left;
 
   // Aggregate items
   for (let i = 1; i <= cartCount; i++) {
-      const itemString = localStorage.getItem(`item${i}`);
+      const itemString = sessionStorage.getItem(`item${i}`);
       if (itemString) {
           const item = JSON.parse(itemString);
           const itemName = item.name;
@@ -297,12 +297,51 @@ float: left;
 </script>
 
 <script>
+// Function to remove one item from the cart
+function removeFromCart(itemName) {
+    let cartCount = sessionStorage.getItem('cartCount');
+    cartCount = cartCount ? parseInt(cartCount) : 0;
+
+    // Loop through items in the cart and find the specified item
+    for (let i = 1; i <= cartCount; i++) {
+        const itemString = sessionStorage.getItem(`item${i}`);
+        if (itemString) {
+            const item = JSON.parse(itemString);
+            if (item.name === itemName) {
+                // If the item quantity is more than 1, decrease the quantity
+                if (item.amount > 1) {
+                    item.amount--;
+                    sessionStorage.setItem(`item${i}`, JSON.stringify(item));
+                } else {
+                    // If the item quantity is 1, remove the item from the cart
+                    sessionStorage.removeItem(`item${i}`);
+                    // Shift other items to fill the gap
+                    for (let j = i + 1; j <= cartCount; j++) {
+                        const nextItemString = sessionStorage.getItem(`item${j}`);
+                        sessionStorage.setItem(`item${j - 1}`, nextItemString);
+                        sessionStorage.removeItem(`item${j}`);
+                    }
+                    cartCount--;
+                    sessionStorage.setItem('cartCount', cartCount);
+                }
+                break;
+            }
+          }
+      }
+
+      // Reload the page to reflect the updated cart
+      location.reload();
+  }
+</script>
+<script>
+  // Get a reference to the "Check Out" button
   const checkoutButton = document.getElementById('checkoutBtn');
-  // event listener for the button
+
+  // Add an event listener to the button
   checkoutButton.addEventListener('click', function() {
       // Redirect to the checkout page
       window.location.href = 'checkout.html';
   });
-</script>
+  </script>
 </body>
 </html>

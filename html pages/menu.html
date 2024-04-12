@@ -506,65 +506,53 @@
             </div>
         </section>
         <script>
-            // Function to initialize and update cart count on page load
-            window.onload = function() {
-                // Retrieve the cart count from local storage
-                let cartCount = localStorage.getItem('cartCount');
+            function addToCart(itemName, itemPrice) {
+                let cartCount = sessionStorage.getItem('cartCount');
                 cartCount = cartCount ? parseInt(cartCount) : 0;
-                
-                // Update cart button text
+
+                // Increment cart count by one only if the item is added to cart
+                if (itemName && itemPrice) {
+                    cartCount++;
+                    sessionStorage.setItem(`item${cartCount}`, JSON.stringify({ name: itemName, price: itemPrice, amount: 1 }));
+                }
+
+                sessionStorage.setItem('cartCount', cartCount);
                 updateCartButtonText(cartCount);
-            };
-        </script>
-<script>
-    function addToCart(itemName, itemPrice) {
-        let cartCount = localStorage.getItem('cartCount');
-        cartCount = cartCount ? parseInt(cartCount) : 0;
+            }
 
-        // Increment cart count by one only if the item is added to cart
-        if (itemName && itemPrice) {
-            cartCount++;
-            localStorage.setItem(`item${cartCount}`, JSON.stringify({ name: itemName, price: itemPrice, amount: 1 }));
-        }
+            function removeFromCart(itemName) {
+                let cartCount = sessionStorage.getItem('cartCount');
+                cartCount = cartCount ? parseInt(cartCount) : 0;
 
-        localStorage.setItem('cartCount', cartCount);
-        updateCartButtonText(cartCount);
-    }
-
-    function removeFromCart(itemName) {
-        let cartCount = localStorage.getItem('cartCount');
-        cartCount = cartCount ? parseInt(cartCount) : 0;
-
-        // Decrement cart count by one only if the item exists in the cart
-        if (cartCount > 0) {
-            for (let i = cartCount; i > 0; i--) {
-                const itemString = localStorage.getItem(`item${i}`);
-                if (itemString) {
-                    const item = JSON.parse(itemString);
-                    if (item.name === itemName) {
-                        localStorage.removeItem(`item${i}`);
-                        cartCount--;
-                        break; // Exit loop once one item is removed
+                // Decrement cart count by one only if the item exists in the cart
+                if (cartCount > 0) {
+                    for (let i = cartCount; i > 0; i--) {
+                        const itemString = sessionStorage.getItem(`item${i}`);
+                        if (itemString) {
+                            const item = JSON.parse(itemString);
+                            if (item.name === itemName) {
+                                sessionStorage.removeItem(`item${i}`);
+                                cartCount--;
+                                break; // Exit loop once one item is removed
+                            }
+                        }
                     }
                 }
+
+                sessionStorage.setItem('cartCount', cartCount);
+                updateCartButtonText(cartCount);
             }
-        }
 
-        localStorage.setItem('cartCount', cartCount);
-        updateCartButtonText(cartCount);
-    }
+            function updateCartButtonText(count) {
+                const cartBtn = document.getElementById('cartBtn');
+                cartBtn.textContent = `Cart (${count})`;
+            }
 
-    function updateCartButtonText(count) {
-        const cartBtn = document.getElementById('cartBtn');
-        cartBtn.textContent = `Cart (${count})`;
-    }
-
-    // Function to navigate to the cart page
-    function goToCartPage() {
-        window.location.href = 'cart.html';
-    }
-</script>
-        
+            // Function to navigate to the cart page
+            function goToCartPage() {
+                window.location.href = 'cart.html';
+            }
+        </script>
         <footer>
             <div class="container">
              <p>&copy; 2024 Big Fin. All rights reserved.</p>
