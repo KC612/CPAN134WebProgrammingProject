@@ -201,6 +201,53 @@ body{
       width: 100%;
       padding: 0;
   }
+
+  form {
+    border: 2px double red; /* Add a border to the form */
+    border-width: 5px;
+    padding: 20px; /* Add padding for spacing */
+    max-width: 400px; /* Limit the width of the form */
+    margin: 0 auto; /* Center the form horizontally */
+    background-color: aliceblue;
+    color: navy;
+    text-align: left; /* Align text to the left within the form */
+}
+
+label {
+    width: 200px;
+    display: inline-block;
+    text-align: left; /* Align labels to the left */
+    margin: 4px;
+}
+
+/* Style for required input fields */
+input:required {
+    border-color: red; /* Highlight required input fields in red */
+}
+
+/* Style for the button */
+.gradient-button {
+    background-image: linear-gradient(to right, #ff0000, #08befb); /* Gradient colors */
+    border: none; /* No border */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding */
+    font-size: 16px; /* Font size */
+    font-weight: bold;
+    cursor: pointer; /* Cursor style */
+    border-radius: 5px; /* Border radius */
+    transition: background-image 0.3s; /* Smooth transition for background change */
+}
+
+/* Style for hover effect */
+.gradient-button:hover {
+    background-image: linear-gradient(to right, #08befb, #ff0000); /* Gradient colors on hover */
+}
+
+.button-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center align the buttons */
+    margin-top: 20px; /* Add some top margin */
+}
   .web-links-one a {
               text-decoration: none;
               color: navy;
