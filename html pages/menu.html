@@ -506,52 +506,81 @@
             </div>
         </section>
         <script>
+            // Function to add an item to the cart
             function addToCart(itemName, itemPrice) {
+                // Retrieve cart count from session storage
                 let cartCount = sessionStorage.getItem('cartCount');
                 cartCount = cartCount ? parseInt(cartCount) : 0;
-
-                // Increment cart count by one only if the item is added to cart
-                if (itemName && itemPrice) {
-                    cartCount++;
-                    sessionStorage.setItem(`item${cartCount}`, JSON.stringify({ name: itemName, price: itemPrice, amount: 1 }));
-                }
-
+        
+                // Increment cart count
+                cartCount++;
+        
+                // Update session storage with the new cart count
                 sessionStorage.setItem('cartCount', cartCount);
+        
+                // Add item to session storage
+                sessionStorage.setItem(`item${cartCount}`, JSON.stringify({ name: itemName, price: itemPrice, amount: 1 }));
+        
+                // Update cart button text
                 updateCartButtonText(cartCount);
             }
-
+        
+            // Function to remove one item from the cart
             function removeFromCart(itemName) {
+                // Retrieve cart count from session storage
                 let cartCount = sessionStorage.getItem('cartCount');
                 cartCount = cartCount ? parseInt(cartCount) : 0;
-
-                // Decrement cart count by one only if the item exists in the cart
-                if (cartCount > 0) {
-                    for (let i = cartCount; i > 0; i--) {
-                        const itemString = sessionStorage.getItem(`item${i}`);
-                        if (itemString) {
-                            const item = JSON.parse(itemString);
-                            if (item.name === itemName) {
+        
+                // Loop through items in the cart and find the specified item
+                for (let i = 1; i <= cartCount; i++) {
+                    const itemString = sessionStorage.getItem(`item${i}`);
+                    if (itemString) {
+                        const item = JSON.parse(itemString);
+                        if (item.name === itemName) {
+                            // If the item quantity is more than 1, decrease the quantity
+                            if (item.amount > 1) {
+                                item.amount--;
+                                sessionStorage.setItem(`item${i}`, JSON.stringify(item));
+                            } else {
+                                // If the item quantity is 1, remove the item from the cart
                                 sessionStorage.removeItem(`item${i}`);
+                                // Shift other items to fill the gap
+                                for (let j = i + 1; j <= cartCount; j++) {
+                                    const nextItemString = sessionStorage.getItem(`item${j}`);
+                                    sessionStorage.setItem(`item${j - 1}`, nextItemString);
+                                    sessionStorage.removeItem(`item${j}`);
+                                }
                                 cartCount--;
-                                break; // Exit loop once one item is removed
                             }
+                            break;
                         }
                     }
                 }
-
+        
+                // Update session storage with the updated cart count
                 sessionStorage.setItem('cartCount', cartCount);
+                // Update cart button text
                 updateCartButtonText(cartCount);
             }
-
+        
+            // Function to update cart button text
             function updateCartButtonText(count) {
                 const cartBtn = document.getElementById('cartBtn');
                 cartBtn.textContent = `Cart (${count})`;
             }
-
+        
             // Function to navigate to the cart page
             function goToCartPage() {
                 window.location.href = 'cart.html';
             }
+        
+            // Function to initialize cart count and cart button text when the page loads
+            window.onload = function() {
+                const cartCount = sessionStorage.getItem('cartCount');
+                if (cartCount) {
+                    updateCartButtonText(parseInt(cartCount));
+                }
+            };
         </script>
         <footer>
             <div class="container">
