@@ -2,11 +2,12 @@
 *{
     margin: 0px;
     padding: 0px;
-    width: 100vw;
+    max-width: 100vw;
     overflow-x: hidden;
 }
 /**THIS CODE CONTROLS THE BODY**/
 body{
+    
     background-image: url(/resources/project1\ backgroundv1p1.png);
     
    
@@ -150,6 +151,7 @@ nav a{
     overflow: hidden;
     display: grid;
     gap: 3em;
+    
 }
 #opt-dining{
     font-size: 9em;
@@ -227,3 +229,131 @@ nav a{
     margin-bottom: 5em;
 background-color: rgba(0, 255, 255, 0.486);
 }
+
+/** Menu items on display **/
+/**
+code to style div for main page
+
+**/
+.slider p{
+    display: none;
+}
+.slider{
+    position: relative;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+p.displaySlide{
+    display: block;
+    
+}
+
+.dis1{
+    background-image: url(/resources/crispy-fish-tacos-with-panko-and-spicy-mayo-lr-8.jpg);
+    width: 80vw;
+    height: 45vh;
+    color: rgb(0, 0, 0);
+    background-size: cover;
+    border-radius: 1%;
+}
+.dis2{
+    background-image: url(/resources/shrimp-po-boy_3x2-alt_mj-kroeger.jpg);
+    width: 80vw;
+    height: 45vh;
+    color: rgb(0, 0, 0);
+    background-size: cover;
+}
+.dis3{
+    background-image: url(/resources/Chicken-Caesar-Salad-5.jpg);
+    width: 80vw;
+    height: 45vh;
+    color: rgb(0, 0, 0);
+    background-size: cover;
+}
+
+.dis4{
+    background-image: url(/resources/Grilled-Salmon-with-Creamy-Spinach.jpg);
+    width: 80vw;
+    height: 45vh;
+    color: rgb(0, 0, 0);
+    background-size: cover;
+}
+
+.dis5{
+    background-image: url(/resources/35_02_LinguineWithLobster_final.jpg);
+    width: 80vw;
+    height: 45vh;
+    color: rgb(0, 0, 0);
+    background-size: cover;
+}
+
+.dis6{
+    background-image: url(/resources/SeafoodPaella.jpg);
+    width: 80vw;
+    height: 45vh;
+    color: rgb(0, 0, 0);
+    background-size: cover;
+}
+
+.dis7{
+    background-image: url(/resources/Crab\ Alfredo.jpg);
+    width: 80vw;
+    height: 45vh;
+    color: rgb(0, 0, 0);
+    background-size: cover;
+}
+.slides{
+    
+    width: 80vw;
+    transition-duration: 3ms;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+       
+}
+
+
+
+
+.slider button{
+    position: absolute;
+    font-size: 4rem;
+    background-color: rgba(0, 0, 0, 0.185);
+    border: none;
+    top: 55%;
+    padding-bottom: 60%;
+   
+    
+    
+    
+}
+.slider button:hover{
+    cursor: pointer;
+    
+    
+    
+    
+}
+
+
+.prev{
+    left: 10%;
+    
+    
+}
+.next{
+    right: 10%;
+}
+
+#showmenu{
+    text-align: center;
+    font-size: 4rem;
+}
+a{
+    text-decoration: none;
+}
+
+/**Adjustments for previou and next bottons  **/
+
