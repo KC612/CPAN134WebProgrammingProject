@@ -4,246 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css stylesheet/aboutus.css">
-
-<style>
-/* Style the element with the id "myHeader" */
-#myHeader {
-  background-color: rgb(255, 255, 255);
-  color: navy;
-  padding: 40px;
-  text-align: center;
-  text-decoration: underline;
-  border-style: double;
-  border-color: red;
-  border-width: 5px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    <style>
+     form {
+    border: 2px double red; /* Add a border to the form */
+    border-width: 5px;
+    padding: 20px; /* Add padding for spacing */
+    max-width: 400px; /* Limit the width of the form */
+    margin: 0 auto; /* Center the form horizontally */
+    background-color: aliceblue;
+    color: navy;
+    text-align: left; /* Align text to the left within the form */
 }
 
-/* Style all elements with the class name "funfact" */
-.funfact {
-  background-color:rgb(255, 255, 255);
-  padding: 10px;
-  text-align: center;
-  text-decoration: underline;
-  border-style: double;
-  border-color: red;
-  border-radius: 5px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-} 
-.funfact:hover {
-  background-color: lightskyblue;
-  color: salmon;
-  transition: width 2s;
-  transition-delay: 1s;
-  transition-timing-function: linear;
-}
-cite { 
-  font-style: italic;
-}
-  address { 
-  display: block;
-  font-style: italic;
+label {
+    width: 200px;
+    display: inline-block;
+    text-align: left; /* Align labels to the left */
+    margin: 4px;
 }
 
-   * {
-  box-sizing: border-box;
+/* Style for required input fields */
+input:required {
+    border-color: red; /* Highlight required input fields in red */
 }
 
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
-}
-
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-#hp  {
-float: left;    
- margin: 0 15px 0 0;
-}
-a:link { color: navy; }
-a:visited {color: black;}
-a:hover, a:focus {color:red;}
-
-.faqs-container {
-  font-family: "Roboto", sans-serif;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.faqs-container .questions-container {
-  box-shadow: 0 4px 8px -3px rgba(0, 0, 0, 0.3);
-}
-
-.faqs-container h2 {
-  padding: 4px 32px;
-  font-size: 28px;
-}
-
-.faqs-container .faq-header {
-  display: flex;
-  background: darkred;
-  color: #f1faee;
-  align-items: center;
-  position: relative;
-  cursor: pointer;
-}
-
-.faqs-container .faq-header .open,
-.faqs-container .faq-header .close {
-  position: absolute;
-  right: 0;
-  padding: 0 32px;
-  font-size: 22px;
-  font-weight: bold;
-  transform: translateY(-8px);
-  opacity: 0;
-  transition: all 500ms;
-}
-
-.faqs-container .faq-header .open.active,
-.faqs-container .faq-header .close.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.faqs-container .faq-header h3 {
-  font-size: 20px;
-  padding: 0 32px;
-}
-
-.faqs-container .content {
-  padding: 0 32px;
-  background: #fdfffc;
-  line-height: 2;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 500ms;
-}
-
-.faqs-container .content.active {
-  max-height: 600px;
-}
-
- /* Style for the button */
- .gradient-button {
-              background-image: linear-gradient(to right, #ff0000, #08befb); /* Gradient colors */
-              border: none; /* No border */
-              color: white; /* Text color */
-              padding: 10px 20px; /* Padding */
-              font-size: 16px; /* Font size */
-              font-weight: bold;
-              cursor: pointer; /* Cursor style */
-              border-radius: 5px; /* Border radius */
-              transition: background-image 0.3s; /* Smooth transition for background change */
-            }
-            
-            /* Style for hover effect */
-            .gradient-button:hover {
-              background-image: linear-gradient(to right, #08befb, #ff0000); /* Gradient colors on hover */
-            }
-            .button-container{
-                display: flex; /* Use flexbox for layout */
-                margin-top: 20px; /* Add some top margin */
-            }
-            /* Style for spacing between buttons */
-        .gradient-button + .gradient-button {
-        margin-left: 10px; /* Small gap between buttons */
-            }
-            form, script, h1 {text-align: center;}
-        h1{color: #ff0000;}
-
-        body{color:darkblue; font-weight: bold;}
-    
-
-            /* Style for the form */
-        form {
-            border: 2px double red; /* Add a border to the form */
-            border-width: 5px;
-            padding: 20px; /* Add padding for spacing */
-            max-width: 400px; /* Limit the width of the form */
-            margin: 0 auto; /* Center the form horizontally */
-            background-color: aliceblue;
-            color: navy;
-            }
-
-        label {width:200px;
-            display:inline-block;
-            justify-content: left;
-            text-align: left;
-            margin: 4px;}
-
-            /* Style for required input fields */
-            input:required {
-            border-color: red; /* Highlight required input fields in red */
-            }
-            div{
-                justify-content: left;}
-
-#div2:hover {
-  background: rgba(255, 238, 0, 0.309);
-  transition: width 2s;
-  transition-delay: 1s;
-  transition-timing-function: ease;
-  }
-  h2 {
-    text-shadow: lightblue 2px 1px;
+/* Style for the button */
+.gradient-button {
+    background-image: linear-gradient(to right, #ff0000, #08befb); /* Gradient colors */
+    border: none; /* No border */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding */
+    font-size: 16px; /* Font size */
     font-weight: bold;
-    text-align: center;
+    cursor: pointer; /* Cursor style */
+    border-radius: 5px; /* Border radius */
+    transition: background-image 0.3s; /* Smooth transition for background change */
 }
-main p:first-child::first-letter {font-size: 25px;}
-p {font-size: 20px;}
 
-.web-links-one {
-  display:flex;
-  flex-wrap: wrap;
-    justify-content: center; /* Align items horizontally in the center */
-    align-items: center; /* Align items vertically in the center */
-    width: 100%;
-    padding: 0;
+/* Style for hover effect */
+.gradient-button:hover {
+    background-image: linear-gradient(to right, #08befb, #ff0000); /* Gradient colors on hover */
 }
-.web-links-one a {
-            text-decoration: none;
-            color: navy;
-            padding: 10px;
-            margin: 5px;
-            border: 2px solid navy;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
-            flex: 1 0 auto;
-            max-width:150px;
-            text-align: center;
-        }
-        .web-links-one a:hover {
-            background-color: navy;
-            color: white;
-        }
-  /* Media query for smaller devices */
-  @media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  [class*="col-"] {
-    width: 100%;
-  }
-  [class*="web-links-one"] {
-    width: 100%;
-  }
 
-  [class*="funfact"] {
-    width: 100%;
-  }
-  .myHeader {
-    width: 100%;
-  }
-  .web-links-one a {
-    width: 100%;
-    max-width: none;
-  }
-  }
-</style>
+.button-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center align the buttons */
+    margin-top: 20px; /* Add some top margin */
+}
+    </style>
 </head>
 <body>
   <div class="web-links-one">
@@ -385,39 +193,72 @@ p {font-size: 20px;}
 <div class="col-6">
 <h2 class="funfact">Contact Us</h2>
 <div id= "div2"><main><p>We would love to hear from you! Fill out the form below, email us, visit us in person, & check out our blog page for updates. We can't wait to connect with you and welcome you to our culinary haven!</p></div></main><br>
-<form method="post">
-  <h1>Contact Form</h1>
-  <div>
-      <label for="Firstname">Name</label>
-      <input class="red" type="text" name="name" placeholder="Enter full name" required><br><br>
+<div class="form-container">
+  <div class="form-container">
+    <form id="contactForm" method="post" action="http://127.0.0.1:5501/html%20pages/contactform.html">
+      <h1>Contact Form</h1>
+        <div>
+          <center>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter full name" required>
+          </center>
+          </div>
+        <div>
+          <center>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </center>
+          </div>
+        <div style="display: flex; align-items: center;">
+            <label for="phoneNumber">Phone Number</label>
+            <select id="phoneNumber" name="phoneNumber">
+                <option value="1">+1</option>
+                <option value="2">+2</option>
+                <option value="3">+3</option>
+            </select>
+            <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+        </div>
+        <div>
+          <center>
+            <label for="visit">Rate Your Experience</label><br>
+            <input type="range" id="visit" name="visit" min="1" max="5" step="1">
+          </center>
+          </div>
+        <center>
+          <!-- Change the type to submit -->
+          <button type="submit" class="gradient-button">Submit</button>
+        </center>
+      </form>
   </div>
-  <div>
-  <label for="Email Address">Email Address</label>
-  <input class=red type="email" name="email" placeholder="Enter your email" required><br><br>
-  </div>
-  <div>
- Phone Number &nbsp;&nbsp;&nbsp;&nbsp;<br>
-   <select name="PhoneNumber">
-      <optgroup lable="PhoneNumber">
-          <option value="1">+1</option>
-          <option value="2">+2</option>
-          <option value="3">+3</option>
-          <option value="4">+4</option>
-          <option value="5">+5</option>
-          <option value="6">+6</option>
-          <option value="7">+7</option>
-          <option value="8">+8</option>
-          <option value="9">+9</option>
-          <input type="text" name="Phone_Number" placeholder="Enter your phone number" required><br><br>
-      </div>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="vist">Rate Your Experience</label><br>
-  <input type="range" name="vist" id="vist" min="1" max="5" step="1"><br><br>
-
-  <div style="display: flex; justify-content: left;"></div>
-  <label for="" style="width: 0"></label>
-  <button class="gradient-button">Submit</button>
-  <p>𓇼 ⋆｡˚ 𓆝⋆｡˚ 𓇼</p>
-</form>
+  
+  <script>
+    // JavaScript for form validation
+    function validateForm() {
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var phoneNumber = document.getElementById('phoneNumber').value;
+        var phone = document.getElementById('phone').value;
+        var visit = document.getElementById('visit').value;
+  
+        if (name === '' || email === '' || phoneNumber === '' || phone === '' || visit === '') {
+            alert('Please fill in all required fields.');
+            return false;
+        }
+  
+        return true;
+    }
+  
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        // Prevent the default form submission
+        event.preventDefault();
+        
+        // Validate the form
+        if (validateForm()) {
+            // If valid, submit the form
+            this.submit();
+        }
+    });
+  </script>
     Contact at:<br>
     <a href="mailto:kcaceres0612@gmail.com">Email</a><br>
     190 Boulevard Wilfrid-Hamel<br>

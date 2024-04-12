@@ -1,5 +1,6 @@
 body{
     background-image: url(/resources/project1\ backgroundv1p1.png);
+    color: navy;
 }
 /* Style the element with the id "myHeader" */
 #myHeader {
@@ -12,32 +13,6 @@ body{
     border-color: red;
     border-width: 5px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  }
-  
-  /* Style all elements with the class name "funfact" */
-  .funfact {
-    background-color:rgb(255, 255, 255);
-    padding: 10px;
-    text-align: center;
-    text-decoration: underline;
-    border-style: double;
-    border-color: red;
-    border-radius: 5px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  } 
-  .funfact:hover {
-    background-color: lightskyblue;
-    color: salmon;
-    transition: width 2s;
-    transition-delay: 1s;
-    transition-timing-function: linear;
-  }
-  cite { 
-    font-style: italic;
-  }
-    address { 
-    display: block;
-    font-style: italic;
   }
   
      * {
@@ -123,68 +98,6 @@ body{
   .faqs-container .content.active {
     max-height: 600px;
   }
-  
-   /* Style for the button */
-   .gradient-button {
-                background-image: linear-gradient(to right, #ff0000, #08befb); /* Gradient colors */
-                border: none; /* No border */
-                color: white; /* Text color */
-                padding: 10px 20px; /* Padding */
-                font-size: 16px; /* Font size */
-                font-weight: bold;
-                cursor: pointer; /* Cursor style */
-                border-radius: 5px; /* Border radius */
-                transition: background-image 0.3s; /* Smooth transition for background change */
-              }
-              
-              /* Style for hover effect */
-              .gradient-button:hover {
-                background-image: linear-gradient(to right, #08befb, #ff0000); /* Gradient colors on hover */
-              }
-              .button-container{
-                  display: flex; /* Use flexbox for layout */
-                  margin-top: 20px; /* Add some top margin */
-              }
-              /* Style for spacing between buttons */
-          .gradient-button + .gradient-button {
-          margin-left: 10px; /* Small gap between buttons */
-              }
-              form, script, h1 {text-align: center;}
-          h1{color: #ff0000;}
-  
-          body{color:darkblue; font-weight: bold;}
-      
-  
-              /* Style for the form */
-          form {
-              border: 2px double red; /* Add a border to the form */
-              border-width: 5px;
-              padding: 20px; /* Add padding for spacing */
-              max-width: 400px; /* Limit the width of the form */
-              margin: 0 auto; /* Center the form horizontally */
-              background-color: aliceblue;
-              color: navy;
-              }
-  
-          label {width:200px;
-              display:inline-block;
-              justify-content: left;
-              text-align: left;
-              margin: 4px;}
-  
-              /* Style for required input fields */
-              input:required {
-              border-color: red; /* Highlight required input fields in red */
-              }
-              div{
-                  justify-content: left;}
-  
-  #div2:hover {
-    background: rgba(255, 238, 0, 0.309);
-    transition: width 2s;
-    transition-delay: 1s;
-    transition-timing-function: ease;
-    }
     h2 {
       text-shadow: lightblue 2px 1px;
       font-weight: bold;
