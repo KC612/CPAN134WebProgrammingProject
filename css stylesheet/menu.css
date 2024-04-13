@@ -1,105 +1,118 @@
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
-    padding: 0; color:#631d1d;
-    background-image: url(/resources/project1\ backgroundv1p1.png);
-  }
-  
-  header {
-    background-image: url(/resources/careers.jpg);
-    background-position:bottom; background-size: 110%; 
-    ;color: #fff;
-    padding: 40px;
-  
-  }
-
-
-     footer {
-  background-color: #631d1d;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-  }
-  
-  
-  
-  section {
-    padding: 35px;
-  }
-  
-  
-  .container {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-
-  .job-listing {
-    background-color: #fff;
-    margin-bottom: 30px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-
-  .job-title {
-    font-size: 24px;
+    padding: 0;
+    background-color: #f3e2e2;
     color: #631d1d;
-  }
+    background-image: url('/resources/menu\ background.jpg');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+            }
 
-  .job-description {
-    margin-top: 10px;
-    color: #555;
-  }
-  h1{text-align: center;}
-  h2 {
-    text-align: center;
-    color: #555;
-  }
-  .web-links{ display: inline;
-  margin-right: 40px;
-  color: #fff;
+ .container {
+    width: 80%;
+    margin: 0 auto;
+}
 
-  }
+h2{ color: #f7f2f2;}
 
-  a{text-decoration: none;}
-  .form-group {
-    margin-bottom: 30px
-    ; margin-right: 20px;
-  }
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color:  #631d1d;
-  }
-  input[type="text"],
-  input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  input[type="file"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    ;
-  }
-  input[type="submit"] {
-    display: block;
-    width: 50%;
-    padding: 10px;
-    background: linear-gradient(to right, rgb(172, 37, 111), #81064e);
+
+h1 {
+    font-size: 8rem;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.web-links{ display: inline;
+    margin-right: 40px;
     color: #fff;
+}
+
+a{text-decoration: none;}
+nav ul li {
+    display: inline;
+    margin-right: 40px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.menu-section {
+    padding: 10px;
+}
+
+.menu-item {
+    background-color: #f5efef;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 2px 5px rgba(141, 73, 73, 0.1);
+    margin-bottom: 20px; font-size: small;
+}
+
+.menu-item h3 {
+    margin-top: 0;
+}
+.menu-item span {
+    display: block;
+    font-weight: bold;
+    color: #333;
+}
+
+footer {
+    background-color: #631d1d;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.rating {
+direction: ltr;
+font-size: 36px;
+}
+.rating > span {
+display: inline-block;
+position: relative;
+width: 36px;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating {
+    display: inline-block;
+    direction: ltr;
+}
+
+nav div.cart-button-container {
+    float: right;
+}
+
+nav button {
+    display: block;
+    background-color: #631d1d; 
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    margin: 8px 0;
+    margin-right: 16px;
     border: none;
-    border-radius: 5px;
-    cursor: pointer; margin-left: 25%;
-  }
-  input[type="submit"]:hover {
-    background-color: #0056b3;
-  }
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: #45a049;
+}
+button{
+    background-color: #631d1d;
+    color: white;
+    float: right;
+}
