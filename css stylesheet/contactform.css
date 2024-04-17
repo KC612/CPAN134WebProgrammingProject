@@ -1,0 +1,153 @@
+body{
+    background-image: url(/resources/project1\ backgroundv1p1.png);
+    color: navy;
+}
+/* Style the element with the id "myHeader" */
+#myHeader {
+    background-color: rgb(255, 255, 255);
+    color: navy;
+    padding: 40px;
+    text-align: center;
+    text-decoration: underline;
+    border-style: double;
+    border-color: red;
+    border-width: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  }
+  
+     * {
+    box-sizing: border-box;
+  }
+  
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  #hp  {
+  float: left;    
+   margin: 0 15px 0 0;
+  }
+  a:link { color: navy; }
+  a:visited {color: black;}
+  a:hover, a:focus {color:red;}
+  
+  .faqs-container {
+    font-family: "Roboto", sans-serif;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .faqs-container .questions-container {
+    box-shadow: 0 4px 8px -3px rgba(0, 0, 0, 0.3);
+  }
+  
+  .faqs-container h2 {
+    padding: 4px 32px;
+    font-size: 28px;
+  }
+  
+  .faqs-container .faq-header {
+    display: flex;
+    background: darkred;
+    color: #f1faee;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .faqs-container .faq-header .open,
+  .faqs-container .faq-header .close {
+    position: absolute;
+    right: 0;
+    padding: 0 32px;
+    font-size: 22px;
+    font-weight: bold;
+    transform: translateY(-8px);
+    opacity: 0;
+    transition: all 500ms;
+  }
+  
+  .faqs-container .faq-header .open.active,
+  .faqs-container .faq-header .close.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .faqs-container .faq-header h3 {
+    font-size: 20px;
+    padding: 0 32px;
+  }
+  
+  .faqs-container .content {
+    padding: 0 32px;
+    background: #fdfffc;
+    line-height: 2;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 500ms;
+  }
+  
+  .faqs-container .content.active {
+    max-height: 600px;
+  }
+    h2 {
+      text-shadow: lightblue 2px 1px;
+      font-weight: bold;
+      text-align: center;
+  }
+  main p:first-child::first-letter {font-size: 25px;}
+  p {font-size: 20px;}
+  
+  .web-links-one {
+    display:flex;
+    flex-wrap: wrap;
+      justify-content: center; /* Align items horizontally in the center */
+      align-items: center; /* Align items vertically in the center */
+      width: 100%;
+      padding: 0;
+  }
+  .web-links-one a {
+              text-decoration: none;
+              color: navy;
+              padding: 10px;
+              margin: 5px;
+              border: 2px solid navy;
+              border-radius: 5px;
+              transition: background-color 0.3s, color 0.3s;
+              flex: 1 0 auto;
+              max-width:150px;
+              text-align: center;
+          }
+          .web-links-one a:hover {
+              background-color: navy;
+              color: white;
+          }
+    /* Media query for smaller devices */
+    @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+    [class*="web-links-one"] {
+      width: 100%;
+    }
+  
+    [class*="funfact"] {
+      width: 100%;
+    }
+    .myHeader {
+      width: 100%;
+    }
+    .web-links-one a {
+      width: 100%;
+      max-width: none;
+    }
+    }

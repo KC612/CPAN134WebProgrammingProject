@@ -1,0 +1,118 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3e2e2;
+    color: #631d1d;
+    background-image: url('/resources/menu\ background.jpg');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+            }
+
+ .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h2{ color: #f7f2f2;}
+
+
+h1 {
+    font-size: 8rem;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.web-links{ display: inline;
+    margin-right: 40px;
+    color: #fff;
+}
+
+a{text-decoration: none;}
+nav ul li {
+    display: inline;
+    margin-right: 40px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.menu-section {
+    padding: 10px;
+}
+
+.menu-item {
+    background-color: #f5efef;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 2px 5px rgba(141, 73, 73, 0.1);
+    margin-bottom: 20px; font-size: small;
+}
+
+.menu-item h3 {
+    margin-top: 0;
+}
+.menu-item span {
+    display: block;
+    font-weight: bold;
+    color: #333;
+}
+
+footer {
+    background-color: #631d1d;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.rating {
+direction: ltr;
+font-size: 36px;
+}
+.rating > span {
+display: inline-block;
+position: relative;
+width: 36px;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating {
+    display: inline-block;
+    direction: ltr;
+}
+
+nav div.cart-button-container {
+    float: right;
+}
+
+nav button {
+    display: block;
+    background-color: #631d1d; 
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    margin: 8px 0;
+    margin-right: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: #45a049;
+}
+button{
+    background-color: #631d1d;
+    color: white;
+    float: right;
+}

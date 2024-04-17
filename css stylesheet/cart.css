@@ -25,24 +25,210 @@ body{
               background-color: navy;
               color: white;
           }
-    /* Media query for smaller devices */
-    @media only screen and (max-width: 768px) {
-    /* For mobile phones: */
-    [class*="col-"] {
-      width: 100%;
-    }
-    [class*="web-links-one"] {
-      width: 100%;
-    }
-  
-    [class*="funfact"] {
-      width: 100%;
-    }
-    .myHeader {
-      width: 100%;
-    }
-    .web-links-one a {
-      width: 100%;
-      max-width: none;
-    }
+/* Style the element with the id "myHeader" */
+#myHeader {
+  background-color: rgb(255, 255, 255);
+  color: navy;
+  padding: 40px;
+  text-align: center;
+  text-decoration: underline;
+  border-style: double;
+  border-color: red;
+  border-width: 5px;
 }
+
+/* Style all elements with the class name "funfact" */
+.funfact {
+  background-color:rgb(255, 255, 255);
+  color:navy;
+  padding: 10px;
+  text-align: center;
+  text-decoration: underline;
+  border-style: double;
+  border-color: red;
+  border-radius: 5px;
+ } 
+
+cite { 
+  font-style: italic;
+}
+  address { 
+  display: block;
+  font-style: italic;
+}
+a:link { color: navy; }
+a:visited {color: black;}
+a:hover, a:focus {color:red;}
+
+   * {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+#hp  {
+float: left;    
+ margin: 0 15px 0 0;
+}
+.faqs-container {
+  font-family: "Roboto", sans-serif;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.faqs-container .questions-container {
+  box-shadow: 0 4px 8px -3px rgba(0, 0, 0, 0.3);
+}
+
+.faqs-container h2 {
+  padding: 4px 32px;
+  font-size: 28px;
+}
+
+.faqs-container .faq-header {
+  display: flex;
+  background: darkred;
+  color: #f1faee;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.faqs-container .faq-header .open,
+.faqs-container .faq-header .close {
+  position: absolute;
+  right: 0;
+  padding: 0 32px;
+  font-size: 22px;
+  font-weight: bold;
+  transform: translateY(-8px);
+  opacity: 0;
+  transition: all 500ms;
+}
+
+.faqs-container .faq-header .open.active,
+.faqs-container .faq-header .close.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.faqs-container .faq-header h3 {
+  font-size: 20px;
+  padding: 0 32px;
+}
+
+.faqs-container .content {
+  padding: 0 32px;
+  background: #fdfffc;
+  line-height: 2;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 500ms;
+}
+
+.faqs-container .content.active {
+  max-height: 600px;
+}
+
+ /* Style for the button */
+ .gradient-button {
+              background-image: linear-gradient(to right, #ff0000, #08befb); /* Gradient colors */
+              border: none; /* No border */
+              color: white; /* Text color */
+              padding: 10px 20px; /* Padding */
+              font-size: 16px; /* Font size */
+              font-weight: bold;
+              cursor: pointer; /* Cursor style */
+              border-radius: 5px; /* Border radius */
+              transition: background-image 0.3s; /* Smooth transition for background change */
+            }
+            
+            /* Style for hover effect */
+            .gradient-button:hover {
+              background-image: linear-gradient(to right, #08befb, #ff0000); /* Gradient colors on hover */
+            }
+            .button-container{
+                display: flex; /* Use flexbox for layout */
+                margin-top: 20px; /* Add some top margin */
+            }
+            /* Style for spacing between buttons */
+        .gradient-button + .gradient-button {
+        margin-left: 10px; /* Small gap between buttons */
+            }
+            form, script, h1 {text-align: center;}
+        h1{color: #ff0000;}
+
+        body{color:darkblue; font-weight: bold;}
+    
+
+            /* Style for the form */
+        form {
+            border: 2px double red; /* Add a border to the form */
+            border-width: 5px;
+            padding: 20px; /* Add padding for spacing */
+            max-width: 400px; /* Limit the width of the form */
+            margin: 0 auto; /* Center the form horizontally */
+            background-color: aliceblue;
+            color: navy;
+            }
+
+        label {width:200px;
+            display:inline-block;
+            justify-content: left;
+            text-align: left;
+            margin: 4px;}
+
+            /* Style for required input fields */
+            input:required {
+            border-color: red; /* Highlight required input fields in red */
+            }
+            div{
+                justify-content: left;}
+    
+                .web-links-one {
+  display:flex;
+  flex-wrap: wrap;
+    justify-content: center; /* Align items horizontally in the center */
+    align-items: center; /* Align items vertically in the center */
+    width: 100%;
+    padding: 0;
+}
+
+        .container {
+  background-color: white; /* White background */
+  padding: 20px; /* Add padding for separation */
+  margin: 0 auto; /* Center the container horizontally */
+  max-width: 800px; /* Set maximum width for the container */
+  border: 2px solid black;
+}
+  /* Media query for smaller devices */
+  @media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+  [class*="web-links-one"] {
+    width: 100%;
+  }
+
+  [class*="funfact"] {
+    width: 100%;
+  }
+  .myHeader {
+    width: 100%;
+  }
+  .web-links-one a {
+    width: 100%;
+    max-width: none;
+  }
+  }
