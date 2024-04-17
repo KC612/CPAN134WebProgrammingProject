@@ -1,3 +1,7 @@
+body{
+  background-image: url(/resources/project1\ backgroundv1p1.png);
+  color: navy;
+}
 #myHeader {
     background-color: rgb(255, 255, 255);
     color: navy;
